@@ -1,0 +1,58 @@
+model/interfaces/IApplicationState.java
+ model.interfaces.IApplicationState
+view/gui/Gui.java
+ view.gui.Gui
+model/dialogs/ChooseShadingTypeDialog.java
+ model.dialogs.ChooseShadingTypeDialog
+view/interfaces/IEventCallback.java
+ view.interfaces.IEventCallback
+view/interfaces/IUiModule.java
+ view.interfaces.IUiModule
+view/gui/PaintCanvas.java
+ view.gui.PaintCanvas
+model/persistence/ApplicationState.java
+ model.persistence.ApplicationState
+model/dialogs/ChooseSecondaryColorDialog.java
+ model.dialogs.ChooseSecondaryColorDialog
+view/gui/GuiWindow.java
+ view.gui.GuiWindow
+view/interfaces/IGuiWindow.java
+ view.interfaces.IGuiWindow
+model/dialogs/ChoosePrimaryColorDialog.java
+ model.dialogs.ChoosePrimaryColorDialog
+view/interfaces/PaintCanvasBase.java
+ view.interfaces.PaintCanvasBase
+model/dialogs/DialogProvider.java
+ model.dialogs.DialogProvider
+model/dialogs/ChooseShapeDialog.java
+ model.dialogs.ChooseShapeDialog
+model/ShapeColor.java
+ model.ShapeColor
+ model.ShapeColor$1
+main/MouseClick.java
+ main.MouseClick
+model/MouseMode.java
+ model.MouseMode
+model/dialogs/ChooseStartAndEndPointModeDialog.java
+ model.dialogs.ChooseStartAndEndPointModeDialog
+model/interfaces/IDialogProvider.java
+ model.interfaces.IDialogProvider
+model/ShapeShadingType.java
+ model.ShapeShadingType
+controller/IJPaintController.java
+ controller.IJPaintController
+view/interfaces/IDialogChoice.java
+ view.interfaces.IDialogChoice
+controller/JPaintController.java
+ controller.JPaintController
+view/EventName.java
+ view.EventName
+ view.EventName$1
+ view.EventName$2
+ view.EventName$3
+ view.EventName$4
+ view.EventName$5
+model/ShapeType.java
+ model.ShapeType
+main/Main.java
+ main.Main
