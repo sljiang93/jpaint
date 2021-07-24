@@ -8,6 +8,7 @@ import model.persistence.ApplicationState;
 import view.gui.Gui;
 import view.gui.GuiWindow;
 import view.gui.PaintCanvas;
+import view.gui.MouseClick;
 import view.interfaces.IGuiWindow;
 import view.interfaces.PaintCanvasBase;
 import view.interfaces.IUiModule;
@@ -35,23 +36,18 @@ public class Main {
         //window.setSize(500,500);
         //window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         //window.setVisible(true);
+
         MouseClick mouseClick = new MouseClick (paintCanvas,appState);
         paintCanvas.addMouseListener(mouseClick);
         paintCanvas.addMouseMotionListener(mouseClick);
 
-        paintCanvas.setCursor((new Cursor(Cursor.CROSSHAIR_CURSOR)));
-
-        Graphics2D graphics2d = paintCanvas.getGraphics2D();
-        graphics2d.setColor(Color.GREEN);
-        //graphics2d.fillRect(12,13,200,400);
-        graphics2d.drawRect(mouseClick.x, mouseClick.y, mouseClick.w, mouseClick.h);
-        System.out.println(mouseClick.x);
-        System.out.println(mouseClick.y);
 
 
-        //print (int x);
-        //print (int y);
-        //System.out.println(x+", "+y);
+
+
+
+
+
 
         //graphics2d.draw(new Rectangle(12,13,200,400));
 

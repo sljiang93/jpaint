@@ -4,7 +4,89 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="349a2f7b-8ba5-4aa9-8126-33f4ae4690a3" name="Default Changelist" comment="" />
+    <list default="true" id="349a2f7b-8ba5-4aa9-8126-33f4ae4690a3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/controller/ICommand.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/controller/IJPaintController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/controller/IUndoable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/controller/JPaintController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/controller/cmdHistory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/controller/cmdRedo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/controller/cmdUndo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/main/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/MouseMode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/ShapeColor$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/ShapeColor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/ShapeConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/ShapeMaker/CreateShape.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/ShapeMaker/DrawShape.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/ShapeMaker/IShape.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/ShapeMaker/RectangleStrat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/ShapeShadingType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/ShapeType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/dialogs/ChoosePrimaryColorDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/dialogs/ChooseSecondaryColorDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/dialogs/ChooseShadingTypeDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/dialogs/ChooseShapeDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/dialogs/ChooseStartAndEndPointModeDialog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/dialogs/DialogProvider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/interfaces/IApplicationState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/interfaces/IDialogProvider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/model/persistence/ApplicationState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/EventName$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/EventName$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/EventName$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/EventName$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/EventName$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/EventName.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/gui/Gui.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/gui/GuiWindow.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/gui/MouseClick.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/gui/PaintCanvas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/interfaces/IDialogChoice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/interfaces/IEventCallback.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/interfaces/IGuiWindow.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/interfaces/IShapeMaker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/interfaces/IUiModule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/view/interfaces/PaintCanvasBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/dist/demo-jpaint.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/libs/jpaint-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ICommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/IUndoable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/cmdHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/cmdRedo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/cmdUndo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/ShapeConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/ShapeMaker/CreateShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/ShapeMaker/DrawShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/ShapeMaker/IShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/ShapeMaker/RectangleStrat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/gui/MouseClick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/interfaces/IShapeMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/JPaintController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/JPaintController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/main/MouseClick.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/gui/PaintCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/gui/PaintCanvas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/JPaintController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/JPaintController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/MouseClick.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/PaintCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/gui/PaintCanvas.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +97,26 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="jpaint" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -24,6 +126,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1v3kh4bH0qTaHgFBEIB8CdOyeuD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -38,8 +148,17 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
-  <component name="RunManager">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle build" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.jpaint [build]">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="jpaint.main" />
@@ -64,8 +183,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="jpaint [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.jpaint [build]" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -78,7 +219,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625798278265</updated>
-      <workItem from="1625798283634" duration="31886000" />
+      <workItem from="1625798283634" duration="34701000" />
+      <workItem from="1626893096230" duration="2215000" />
+      <workItem from="1626895930370" duration="37109000" />
     </task>
     <servers />
   </component>
@@ -95,5 +238,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

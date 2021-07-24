@@ -11,7 +11,6 @@ public class PaintCanvas extends PaintCanvasBase {
         return (Graphics2D) getGraphics();
     }
 
-    @Override
     /**
      * This is an event handler.  If this function gets called, its time to
      * draw the entire picture.
@@ -19,15 +18,15 @@ public class PaintCanvas extends PaintCanvasBase {
      */
 
 
-    public void paint(Graphics g) {
-        super.paint(g);
+   // public void paint(Graphics g) {
+        //super.paint(g);
         //drawRectangles(g);
 
 
 
 
-        System.out.println("Time to repaint");
+        //System.out.println("Time to repaint");
 
 
-    }
+    //}
 }

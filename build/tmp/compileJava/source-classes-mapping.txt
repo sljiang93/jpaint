@@ -1,5 +1,11 @@
+view/gui/MouseClick.java
+ view.gui.MouseClick
 model/interfaces/IApplicationState.java
  model.interfaces.IApplicationState
+controller/cmdRedo.java
+ controller.cmdRedo
+model/ShapeMaker/CreateShape.java
+ model.ShapeMaker.CreateShape
 view/gui/Gui.java
  view.gui.Gui
 model/dialogs/ChooseShadingTypeDialog.java
@@ -8,6 +14,12 @@ view/interfaces/IEventCallback.java
  view.interfaces.IEventCallback
 view/interfaces/IUiModule.java
  view.interfaces.IUiModule
+controller/IUndoable.java
+ controller.IUndoable
+view/interfaces/IShapeMaker.java
+ view.interfaces.IShapeMaker
+model/ShapeMaker/IShape.java
+ model.ShapeMaker.IShape
 view/gui/PaintCanvas.java
  view.gui.PaintCanvas
 model/persistence/ApplicationState.java
@@ -16,10 +28,16 @@ model/dialogs/ChooseSecondaryColorDialog.java
  model.dialogs.ChooseSecondaryColorDialog
 view/gui/GuiWindow.java
  view.gui.GuiWindow
+controller/ICommand.java
+ controller.ICommand
+controller/cmdHistory.java
+ controller.cmdHistory
 view/interfaces/IGuiWindow.java
  view.interfaces.IGuiWindow
 model/dialogs/ChoosePrimaryColorDialog.java
  model.dialogs.ChoosePrimaryColorDialog
+controller/cmdUndo.java
+ controller.cmdUndo
 view/interfaces/PaintCanvasBase.java
  view.interfaces.PaintCanvasBase
 model/dialogs/DialogProvider.java
@@ -29,8 +47,6 @@ model/dialogs/ChooseShapeDialog.java
 model/ShapeColor.java
  model.ShapeColor
  model.ShapeColor$1
-main/MouseClick.java
- main.MouseClick
 model/MouseMode.java
  model.MouseMode
 model/dialogs/ChooseStartAndEndPointModeDialog.java
@@ -41,8 +57,8 @@ model/ShapeShadingType.java
  model.ShapeShadingType
 controller/IJPaintController.java
  controller.IJPaintController
-view/interfaces/IDialogChoice.java
- view.interfaces.IDialogChoice
+main/Main.java
+ main.Main
 controller/JPaintController.java
  controller.JPaintController
 view/EventName.java
@@ -54,5 +70,11 @@ view/EventName.java
  view.EventName$5
 model/ShapeType.java
  model.ShapeType
-main/Main.java
- main.Main
+view/interfaces/IDialogChoice.java
+ view.interfaces.IDialogChoice
+model/ShapeMaker/DrawShape.java
+ model.ShapeMaker.DrawShape
+model/ShapeConfig.java
+ model.ShapeConfig
+model/ShapeMaker/RectangleStrat.java
+ model.ShapeMaker.RectangleStrat
