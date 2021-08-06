@@ -1,15 +1,15 @@
 package model.persistence;
 
-import model.ShapeColor;
-import model.ShapeShadingType;
-import model.ShapeType;
-import model.MouseMode;
+import model.*;
 import model.dialogs.DialogProvider;
 import model.interfaces.IApplicationState;
 import model.interfaces.IDialogProvider;
 import view.interfaces.IUiModule;
 
-public class ApplicationState implements IApplicationState {
+import java.io.Serializable;
+
+public class ApplicationState implements IApplicationState, Serializable {
+    private static final long serialVersionUID = -5545483996576839007L;
     private final IUiModule uiModule;
     private final IDialogProvider dialogProvider;
 
@@ -17,7 +17,7 @@ public class ApplicationState implements IApplicationState {
     private ShapeColor activePrimaryColor;
     private ShapeColor activeSecondaryColor;
     private ShapeShadingType activeShapeShadingType;
-    private MouseMode activeMouseMode;
+    private StartAndEndPointMode activeStartAndEndPointMode;
 
     public ApplicationState(IUiModule uiModule) {
         this.uiModule = uiModule;
@@ -47,13 +47,27 @@ public class ApplicationState implements IApplicationState {
 
     @Override
     public void setActiveStartAndEndPointMode() {
-        activeMouseMode = uiModule.getDialogResponse(dialogProvider.getChooseStartAndEndPointModeDialog());
+        activeStartAndEndPointMode = uiModule.getDialogResponse(dialogProvider.getChooseStartAndEndPointModeDialog());
     }
 
+    /*@Override
+    public void CopyCommand() { }   // should anything go here?
+
     @Override
-    public ShapeType getActiveShapeType() {
-        return activeShapeType;
-    }
+    public void DeleteCommand() { }
+
+    @Override
+    public void PasteCommand() { }
+
+    @Override
+    public void UndoCommand() { }
+
+    @Override
+    public void RedoCommand() { }
+    */
+
+    @Override
+    public ShapeType getActiveShapeType() { return activeShapeType; }
 
     @Override
     public ShapeColor getActivePrimaryColor() {
@@ -71,15 +85,15 @@ public class ApplicationState implements IApplicationState {
     }
 
     @Override
-    public MouseMode getActiveMouseMode() {
-        return activeMouseMode;
+    public StartAndEndPointMode getActiveStartAndEndPointMode() {
+        return activeStartAndEndPointMode;
     }
 
     private void setDefaults() {
-        activeShapeType = ShapeType.RECTANGLE;
+        activeShapeType = ShapeType.ELLIPSE;
         activePrimaryColor = ShapeColor.BLUE;
         activeSecondaryColor = ShapeColor.GREEN;
         activeShapeShadingType = ShapeShadingType.FILLED_IN;
-        activeMouseMode = MouseMode.DRAW;
+        activeStartAndEndPointMode = StartAndEndPointMode.DRAW;
     }
 }

@@ -2,83 +2,56 @@ package main;
 
 import controller.IJPaintController;
 import controller.JPaintController;
-import model.ShapeColor;
-import model.ShapeType;
+import controller.MouseClick;
+import model.Shape;
+import model.ShapeFactory;
+import model.DrawShapeHandler;
+import model.interfaces.IShapeStrategy;
 import model.persistence.ApplicationState;
 import view.gui.Gui;
 import view.gui.GuiWindow;
 import view.gui.PaintCanvas;
-import view.gui.MouseClick;
 import view.interfaces.IGuiWindow;
-import view.interfaces.PaintCanvasBase;
 import view.interfaces.IUiModule;
+import java.util.List;
 
-import javax.swing.*;
-import java.applet.Applet;
-import java.awt.*;
-import java.util.Collection;
-import java.util.EnumMap;
+import model.ShapeList;
+
+import java.util.ArrayList;
 
 public class Main {
-
-
-
-
     public static void main(String[] args){
-        PaintCanvasBase paintCanvas = new PaintCanvas();
+        PaintCanvas paintCanvas = new PaintCanvas();
         IGuiWindow guiWindow = new GuiWindow(paintCanvas);
         IUiModule uiModule = new Gui(guiWindow);
         ApplicationState appState = new ApplicationState(uiModule);
-        IJPaintController controller = new JPaintController(uiModule, appState);
-        controller.setup();
-        //JFrame window = new JFrame("Rectangles");
-        //window.getContentPane().addMouseListener(new MouseClick());
-        //window.setSize(500,500);
-        //window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        //window.setVisible(true);
 
-        MouseClick mouseClick = new MouseClick (paintCanvas,appState);
+
+        List<Shape> selectedShapeList = new ArrayList<>();
+        List<Shape> masterShapeList = new ArrayList<>();
+        List<Shape> copiedShapeList = new ArrayList<>();
+
+        List<Shape> commandHistoryUndo = new ArrayList<>();
+        List<Shape> commandHistoryRedo = new ArrayList<>(); ;
+
+
+        IShapeStrategy shapeStrategy=null;
+
+        ShapeList shapeList = new ShapeList(new DrawShapeHandler(paintCanvas, shapeStrategy), masterShapeList, commandHistoryRedo, commandHistoryRedo);
+
+
+        IJPaintController controller = new JPaintController(uiModule, appState, shapeList,  commandHistoryRedo, commandHistoryRedo, commandHistoryRedo, commandHistoryRedo, paintCanvas);
+
+
+        ShapeFactory shapeFactory = new ShapeFactory(appState, shapeList, commandHistoryRedo, commandHistoryRedo);
+
+
+        MouseClick mouseClick = new MouseClick(shapeFactory);
+
+
         paintCanvas.addMouseListener(mouseClick);
-        paintCanvas.addMouseMotionListener(mouseClick);
 
+        controller.setup();
 
-
-
-
-
-
-
-
-        //graphics2d.draw(new Rectangle(12,13,200,400));
-
-        // Outlined rectangle
-        //graphics2d.setStroke(new BasicStroke(5));
-        //graphics2d.setColor(Color.BLUE);
-        //graphics2d.drawRect(12, 13, 200, 400);
-
-// Selected Shape
-        //Stroke stroke = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 1, new float[]{9}, 0);
-        //graphics2d.setStroke(stroke);
-        //graphics2d.setColor(Color.BLACK);
-        //graphics2d.drawRect(7, 8, 210, 410);
-
-
-
-
-
-
-
-
-
-
-
-        // For example purposes only; remove all lines below from your final project.
-
-
-        // end of example
     }
-    //public void drawRect (int)
-
-
-
 }

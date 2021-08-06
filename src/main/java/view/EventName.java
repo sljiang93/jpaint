@@ -7,6 +7,13 @@ public enum EventName {
 			return "CHOOSE SHAPE";
 		}
 	},
+
+	CHOOSE_START_POINT_ENDPOINT_MODE {
+		@Override
+		public String toString() {
+			return "CHOOSE START POINT/ENDPOINT MODE";
+		}},
+
 	CHOOSE_PRIMARY_COLOR {
 		@Override
 		public String toString() {

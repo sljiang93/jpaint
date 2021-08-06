@@ -1,22 +1,22 @@
-package controller;
+package model;
+
+import model.interfaces.IUndoable;
+
 import java.util.Stack;
-import controller.IUndoable;
 
 
+public class CommandHistory {
+    private static final Stack<IUndoable> undoStack = new Stack<>();
+    private static final Stack<IUndoable> redoStack = new Stack<>();
 
-public class cmdHistory {
-    private static final Stack<IUndoable> undoStack = new Stack<IUndoable>();
-    private static final Stack<IUndoable> redoStack = new Stack<IUndoable>();
-
-    public static void add(IUndoable cmd){
+    public static void add(IUndoable cmd) {
         undoStack.push(cmd);
         redoStack.clear();
     }
 
-    public static boolean undo(){
-
+    public static boolean undo() {
         boolean result = !undoStack.empty();
-        if(result){
+        if (result) {
             IUndoable c = undoStack.pop();
             redoStack.push(c);
             c.undo();
@@ -32,9 +32,7 @@ public class cmdHistory {
             c.redo();
         }
         return result;
-
     }
-
 
 
 }

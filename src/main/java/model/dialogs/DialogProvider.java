@@ -3,7 +3,8 @@ package model.dialogs;
 import model.ShapeColor;
 import model.ShapeShadingType;
 import model.ShapeType;
-import model.MouseMode;
+import model.StartAndEndPointMode;
+import model.StartAndEndPointMode;
 import model.interfaces.IApplicationState;
 import model.interfaces.IDialogProvider;
 import view.interfaces.IDialogChoice;
@@ -13,7 +14,7 @@ public class DialogProvider implements IDialogProvider {
     private final IDialogChoice<ShapeColor> choosePrimaryColorDialog;
     private final IDialogChoice<ShapeColor> chooseSecondaryColorDialog;
     private final IDialogChoice<ShapeShadingType> chooseShadingTypeDialog;
-    private final IDialogChoice<MouseMode> chooseStartAndEndPointModeDialog;
+    private final IDialogChoice<StartAndEndPointMode> chooseStartAndEndPointModeDialog;
     private final IApplicationState applicationState;
 
     public DialogProvider(IApplicationState applicationState) {
@@ -46,7 +47,7 @@ public class DialogProvider implements IDialogProvider {
     }
 
     @Override
-    public IDialogChoice<MouseMode> getChooseStartAndEndPointModeDialog() {
+    public IDialogChoice<StartAndEndPointMode> getChooseStartAndEndPointModeDialog() {
         return chooseStartAndEndPointModeDialog;
     }
 }
