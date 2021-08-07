@@ -5,11 +5,12 @@ import model.dialogs.DialogProvider;
 import model.interfaces.IApplicationState;
 import model.interfaces.IDialogProvider;
 import view.interfaces.IUiModule;
-
+import java.awt.Point;
 import java.io.Serializable;
+import controller.MouseClick;
 
 public class ApplicationState implements IApplicationState, Serializable {
-    private static final long serialVersionUID = -5545483996576839007L;
+    //private static final long serialVersionUID = -5545483996576839007L;
     private final IUiModule uiModule;
     private final IDialogProvider dialogProvider;
 
@@ -18,6 +19,8 @@ public class ApplicationState implements IApplicationState, Serializable {
     private ShapeColor activeSecondaryColor;
     private ShapeShadingType activeShapeShadingType;
     private StartAndEndPointMode activeStartAndEndPointMode;
+    private Point startPoint;
+    private Point endPoint;
 
     public ApplicationState(IUiModule uiModule) {
         this.uiModule = uiModule;
@@ -50,21 +53,21 @@ public class ApplicationState implements IApplicationState, Serializable {
         activeStartAndEndPointMode = uiModule.getDialogResponse(dialogProvider.getChooseStartAndEndPointModeDialog());
     }
 
-    /*@Override
-    public void CopyCommand() { }   // should anything go here?
-
     @Override
+    public void CopyCommand() { }  
+
+    /*@Override
     public void DeleteCommand() { }
 
     @Override
-    public void PasteCommand() { }
+    public void PasteCommand() { }*/
 
     @Override
     public void UndoCommand() { }
 
     @Override
     public void RedoCommand() { }
-    */
+    
 
     @Override
     public ShapeType getActiveShapeType() { return activeShapeType; }
@@ -87,6 +90,27 @@ public class ApplicationState implements IApplicationState, Serializable {
     @Override
     public StartAndEndPointMode getActiveStartAndEndPointMode() {
         return activeStartAndEndPointMode;
+    }
+
+    public Point getStartPoint(){
+        return startPoint;
+    }
+
+    public Point getEndPoint(){
+        return endPoint;
+    }
+
+    
+    public Point getAdjustedStart(){
+        double startX = Math.min(startPoint.getX(), endPoint.getX());
+        double startY = Math.min(startPoint.getY(), endPoint.getY());
+        return new Point();
+    }
+
+    public Point getAdjustedEnd(){
+        double endX = Math.max(startPoint.getX(), endPoint.getX());
+        double endY = Math.max(startPoint.getY(), endPoint.getY());
+        return new Point();
     }
 
     private void setDefaults() {

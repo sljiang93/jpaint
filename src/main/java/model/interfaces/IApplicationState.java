@@ -18,11 +18,11 @@ public interface IApplicationState {
 
 
 
-    //void CopyCommand();
+    void CopyCommand();
     //void DeleteCommand();
     //void PasteCommand();
-    //void UndoCommand();
-    //void RedoCommand();
+    void UndoCommand();
+    void RedoCommand();
 
     ShapeType getActiveShapeType();
 

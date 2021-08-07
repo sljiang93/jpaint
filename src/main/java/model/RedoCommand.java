@@ -23,29 +23,29 @@ public class RedoCommand implements ICommand, IUndoable {
     public void run() {
         redo();
 
-        if(shapeList.masterShapeList.isEmpty() && commandHistoryRedo.isEmpty()){
-            System.out.println("Nothing to redo");
-        }
+        if(!shapeList.masterShapeList.isEmpty() || !commandHistoryRedo.isEmpty()){
+            
 
-        else{
-            int shapeUndoIndex = commandHistoryRedo.size()-1;
-            Shape shapeUndo = commandHistoryRedo.get(shapeUndoIndex);
+        
+            int UndoIndex = commandHistoryRedo.size()-1;
+            Shape shapeUndo = commandHistoryRedo.get(UndoIndex);
 
-            if(commandHistoryUndo.size()>1){
-                commandHistoryUndo.clear();
+            if(commandHistoryUndo.isEmpty()){
+                
                 commandHistoryUndo.add(shapeUndo);
             } else{
+                commandHistoryUndo.clear();
                 commandHistoryUndo.add(shapeUndo);
             }
 
-            // remove last index from commandHistoryRedo
+        
             shapeList.masterShapeList.add(shapeUndo);
 
             shapeList.drawShapeHandler.paintCanvas.repaint();
             shapeList.drawShapeHandler.update(shapeList.masterShapeList);
 
             CommandHistory.add(this);
-        }
+        }else{return;}
 
 
     }

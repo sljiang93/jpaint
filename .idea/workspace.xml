@@ -4,97 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="349a2f7b-8ba5-4aa9-8126-33f4ae4690a3" name="Default Changelist" comment="some significant bugs remain but I've move mouseClick and added commands such as redo and undo. CreateShape and DrawShape are a work in progress. More to come.">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/ColorSingleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/CommandHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/CreateShapeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/DrawShapeHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/EllipseStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/RectangleStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/RedoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/SelectShapeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/ShapeList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/TriangleStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/UndoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/interfaces/IDrawShapeHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/interfaces/IShapeStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="349a2f7b-8ba5-4aa9-8126-33f4ae4690a3" name="Default Changelist" comment="shapes done, select done, some shape disappearing problem">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/controller/ICommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/controller/IUndoable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/controller/JPaintController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/controller/JPaintController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/controller/cmdHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/controller/cmdRedo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/controller/cmdUndo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/MouseMode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/ShapeConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/ShapeMaker/CreateShape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/ShapeMaker/DrawShape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/ShapeMaker/IShape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/ShapeMaker/RectangleStrat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/dialogs/ChooseStartAndEndPointModeDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/dialogs/ChooseStartAndEndPointModeDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/dialogs/DialogProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/dialogs/DialogProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/interfaces/IApplicationState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/interfaces/IApplicationState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/interfaces/IDialogProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/interfaces/IDialogProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/persistence/ApplicationState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/persistence/ApplicationState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/view/EventName$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/view/EventName$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/view/EventName$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/view/EventName$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/view/EventName$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/view/EventName$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/view/EventName$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/view/EventName$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/view/EventName.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/view/EventName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/view/gui/MouseClick.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/view/gui/PaintCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/view/gui/PaintCanvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/view/interfaces/IShapeMaker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/JPaintController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/JPaintController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/MouseMode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/dialogs/ChooseStartAndEndPointModeDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/dialogs/ChooseStartAndEndPointModeDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/dialogs/DialogProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/dialogs/DialogProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/interfaces/IApplicationState.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/interfaces/IApplicationState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/interfaces/IDialogProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/interfaces/IDialogProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/persistence/ApplicationState.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/persistence/ApplicationState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/EventName$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/EventName$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/EventName$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/EventName$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/EventName$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/EventName$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/EventName$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/EventName$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/EventName.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/EventName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/gui/PaintCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/gui/PaintCanvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/dist/demo-jpaint.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/dist/demo-jpaint.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/jpaint-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/jpaint-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ICommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/interfaces/ICommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/IUndoable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/interfaces/IUndoable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/JPaintController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/JPaintController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/cmdHistory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/cmdRedo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/cmdUndo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/MouseMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/StartAndEndPointMode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/ShapeConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ShapeFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/ShapeMaker/CreateShape.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/ShapeMaker/DrawShape.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/ShapeMaker/IShape.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/ShapeMaker/RectangleStrat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dialogs/ChooseStartAndEndPointModeDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dialogs/ChooseStartAndEndPointModeDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dialogs/DialogProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dialogs/DialogProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/interfaces/IApplicationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/interfaces/IApplicationState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/interfaces/IDialogProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/interfaces/IDialogProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/persistence/ApplicationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persistence/ApplicationState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/EventName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/EventName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/MouseClick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MouseClick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/PaintCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/gui/PaintCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/interfaces/IShapeMaker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -349,6 +261,7 @@
       <workItem from="1628258633654" duration="3876000" />
       <workItem from="1628268324778" duration="179000" />
       <workItem from="1628270523132" duration="1815000" />
+      <workItem from="1628277828301" duration="168000" />
     </task>
     <task id="LOCAL-00001" summary="some significant bugs remain but I've move mouseClick and added commands such as redo and undo. CreateShape and DrawShape are a work in progress. More to come.">
       <created>1627091474856</created>
@@ -357,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627091474857</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="shapes done, select done, some shape disappearing problem">
+      <created>1628277915586</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1628277915586</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,6 +297,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some significant bugs remain but I've move mouseClick and added commands such as redo and undo. CreateShape and DrawShape are a work in progress. More to come." />
-    <option name="LAST_COMMIT_MESSAGE" value="some significant bugs remain but I've move mouseClick and added commands such as redo and undo. CreateShape and DrawShape are a work in progress. More to come." />
+    <MESSAGE value="shapes done, select done, some shape disappearing problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="shapes done, select done, some shape disappearing problem" />
   </component>
 </project>

@@ -14,6 +14,7 @@ public class DrawShapeHandler implements IDrawShapeHandler {
     private IShapeStrategy shapeStrategy;
     private IApplicationState applicationState;
     public PaintCanvas paintCanvas;
+    double dX,dY;
 
     public DrawShapeHandler(PaintCanvas paintCanvas, IShapeStrategy shapeStrategy){
         this.paintCanvas = paintCanvas;
@@ -53,5 +54,31 @@ public class DrawShapeHandler implements IDrawShapeHandler {
 
             shapeStrategy.draw();
         }
+    }
+
+    @Override
+    public void addX(double dX) {
+        return;
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void addY(double dY) {
+        return;
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public Point getAdjustedEnd() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Point getAdjustedStart() {
+        // TODO Auto-generated method stub
+        return null;
     }
 }

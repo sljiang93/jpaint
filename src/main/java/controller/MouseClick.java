@@ -49,9 +49,9 @@ public class MouseClick extends MouseAdapter {
         else if(shapeFactory.appState.getActiveStartAndEndPointMode()==StartAndEndPointMode.SELECT) {
             shapeCommand = new SelectShapeCommand(shapeFactory,startPoint, endPoint);
         }
-        //else if(shapeFactory.appState.getActiveStartAndEndPointMode()==StartAndEndPointMode.MOVE){
-        //shapeCommand = new MoveShapeCommand(shapeFactory, shapeType, startPoint, endPoint);
-        //}
+        else if(shapeFactory.appState.getActiveStartAndEndPointMode()==StartAndEndPointMode.MOVE){
+        shapeCommand = new MoveCommand(shapeFactory, shapeType, startPoint, endPoint);
+        }
 
         shapeCommand.run();
     }

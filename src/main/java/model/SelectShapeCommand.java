@@ -1,5 +1,6 @@
 package model;
 import model.interfaces.ICommand;
+import model.interfaces.IDrawShapeHandler;
 import controller.MouseClick;
 import model.ShapeList;
 import model.Shape;
@@ -27,6 +28,7 @@ public class SelectShapeCommand implements ICommand{
     public static SelectShapeCommand box;
     public ShapeType shapeType;
     public String clickType;
+    public IDrawShapeHandler selectedShape;
 
 
 
@@ -53,6 +55,10 @@ public class SelectShapeCommand implements ICommand{
 
     }
 
+    public IDrawShapeHandler getSeletectedShape(){
+        return selectedShape;
+    }
+
     public void selectAdd (List<Shape> masterShapeList){
 
         xMin = boxStart.x;
@@ -63,6 +69,7 @@ public class SelectShapeCommand implements ICommand{
                 System.out.println("select success");
 
                 shapeFactory.shapeList.masterShapeList.add(shape);
+                //DrawShapeHandler.shapeStrategy.drawRect(xMin-1,yMax+1);
 
             }else{
                 System.out.println("select fail");

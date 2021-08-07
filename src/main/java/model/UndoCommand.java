@@ -24,28 +24,26 @@ public class UndoCommand implements ICommand, IUndoable {
     public void run() {
         undo();
 
-        if(shapeList.masterShapeList.isEmpty() && commandHistoryRedo.isEmpty()){
-            System.out.println("Nothing to undo");
-        }
-        else{
+        if(!shapeList.masterShapeList.isEmpty() || !commandHistoryRedo.isEmpty()){
+        
             int shapeRedoIndex = shapeList.masterShapeList.size()-1;
             Shape shapeRedo = shapeList.masterShapeList.get(shapeRedoIndex);
 
-            if(commandHistoryRedo.size()>1){
-                commandHistoryRedo.clear();
+            if(commandHistoryRedo.isEmpty()){
+                
                 commandHistoryRedo.add(shapeRedo);
             } else{
+                commandHistoryRedo.clear();
                 commandHistoryRedo.add(shapeRedo);
             }
 
             shapeList.masterShapeList.remove(shapeList.masterShapeList.size()-1);
-
             shapeList.drawShapeHandler.paintCanvas.repaint();
             shapeList.drawShapeHandler.update(shapeList.masterShapeList);
 
 
             CommandHistory.add(this);
-        }
+        }else{return;}
 
 
 
