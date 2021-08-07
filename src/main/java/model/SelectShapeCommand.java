@@ -11,6 +11,9 @@ import java.awt.*;
 import java.awt.Point;
 import java.util.List;
 
+import java.util.EnumMap;
+import java.awt.Graphics2D;
+
 
 
 
@@ -21,7 +24,7 @@ public class SelectShapeCommand implements ICommand{
     public Point endPoint;
     public PaintCanvas canvas;
     public int height, width;
-    public int xMin, xMax, yMin, yMax;
+    public int xMin, xMax, yMin, yMax,xBox,yBox;
     public Point boxStart,boxEnd;
     public ShapeFactory shapeFactory;
     public Shape shape;
@@ -59,17 +62,31 @@ public class SelectShapeCommand implements ICommand{
         return selectedShape;
     }
 
+    public void borderBox(Graphics2D graphics){
+
+        graphics.setColor(Color.black);
+        graphics.setStroke(new BasicStroke(4.0f));
+        float alpha = 0.6f;
+        graphics.drawRect(shape.getXMin(), shape.getYMin(), shape.getWidth(), shape.getHeight());
+        AlphaComposite ac = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha);
+        graphics.setComposite(ac);
+
+    }
+
     public void selectAdd (List<Shape> masterShapeList){
 
-        xMin = boxStart.x;
-        yMax = boxEnd.y;
+        xMin = startPoint.x;
+        yMax = endPoint.y;
+        xBox = boxStart.x;
+        yBox = boxEnd.y;
 
         for (Shape shape: masterShapeList){
-            if (shape.containsPoint(xMin, yMax)){
+            if (xBox>=xMin&&yBox<=yMax){
                 System.out.println("select success");
+                
 
                 shapeFactory.shapeList.masterShapeList.add(shape);
-                //DrawShapeHandler.shapeStrategy.drawRect(xMin-1,yMax+1);
+               
 
             }else{
                 System.out.println("select fail");

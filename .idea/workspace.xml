@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="349a2f7b-8ba5-4aa9-8126-33f4ae4690a3" name="Default Changelist" comment="shapes done, select done, some shape disappearing problem">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="349a2f7b-8ba5-4aa9-8126-33f4ae4690a3" name="Default Changelist" comment="copy/paste plus some bug fixes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -262,6 +259,7 @@
       <workItem from="1628268324778" duration="179000" />
       <workItem from="1628270523132" duration="1815000" />
       <workItem from="1628277828301" duration="168000" />
+      <workItem from="1628295201076" duration="75000" />
     </task>
     <task id="LOCAL-00001" summary="some significant bugs remain but I've move mouseClick and added commands such as redo and undo. CreateShape and DrawShape are a work in progress. More to come.">
       <created>1627091474856</created>
@@ -277,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628277915586</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="copy/paste plus some bug fixes">
+      <created>1628295263655</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1628295263655</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +303,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some significant bugs remain but I've move mouseClick and added commands such as redo and undo. CreateShape and DrawShape are a work in progress. More to come." />
     <MESSAGE value="shapes done, select done, some shape disappearing problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="shapes done, select done, some shape disappearing problem" />
+    <MESSAGE value="copy/paste plus some bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="copy/paste plus some bug fixes" />
   </component>
 </project>
