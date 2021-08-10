@@ -8,15 +8,15 @@ import java.awt.event.MouseEvent;
 
 public class MouseClick extends MouseAdapter {
 
-    public ShapeMaker shapeFactory;
+    public ShapeMaker shapeMaker;
     public ShapeType shapeType;
     public Point startPoint;
     public Point endPoint;
     public String clickType;
 
 
-    public MouseClick(ShapeMaker shapeFactory) {
-        this.shapeFactory = shapeFactory;
+    public MouseClick(ShapeMaker shapeMaker) {
+        this.shapeMaker = shapeMaker;
     }
 
     public void mousePressed(MouseEvent e) {
@@ -27,30 +27,24 @@ public class MouseClick extends MouseAdapter {
 
     public void mouseReleased(MouseEvent e) {
 
-        shapeType = shapeFactory.appState.getActiveShapeType();
+        shapeType = shapeMaker.appState.getActiveShapeType();
         int xR = e.getX();
         int yR = e.getY();
         endPoint = new Point(xR, yR);
 
 
-        if(e.getButton() == MouseEvent.BUTTON1){
-            clickType = "LEFT";
-        }
-
-        if(e.getButton() == MouseEvent.BUTTON3){
-            clickType = "RIGHT";
-        }
+       
 
         ICommand shapeCommand = null;
 
-        if(shapeFactory.appState.getActiveMouseMode()== MouseMode.DRAW) {
-            shapeCommand = new CreateShapeCommand(shapeFactory, shapeType, startPoint, endPoint, clickType);
+        if(shapeMaker.appState.getActiveMouseMode()== MouseMode.DRAW) {
+            shapeCommand = new CreateShapeCommand(shapeMaker, shapeType, startPoint, endPoint/*, clickType*/);
         }
-        else if(shapeFactory.appState.getActiveMouseMode()==MouseMode.SELECT) {
-            shapeCommand = new SelectShapeCommand(shapeFactory,startPoint, endPoint);
+        else if(shapeMaker.appState.getActiveMouseMode()==MouseMode.SELECT) {
+            shapeCommand = new SelectShapeCommand(shapeMaker,startPoint, endPoint);
         }
-        else if(shapeFactory.appState.getActiveMouseMode()==MouseMode.MOVE){
-        shapeCommand = new MoveCommand(shapeFactory, shapeType, startPoint, endPoint);
+        else if(shapeMaker.appState.getActiveMouseMode()==MouseMode.MOVE){
+        shapeCommand = new MoveCommand(shapeMaker, shapeType, startPoint, endPoint);
         }
 
         shapeCommand.run();
@@ -66,4 +60,4 @@ public class MouseClick extends MouseAdapter {
 
 
 }
-//}
+

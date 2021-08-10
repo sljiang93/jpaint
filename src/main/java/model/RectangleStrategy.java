@@ -13,11 +13,11 @@ public class RectangleStrategy implements IShapeStrategy {
     private Shape shape;
 
 
-    public RectangleStrategy(Graphics2D graphics, ShapeColor primaryColor, ShapeColor secondaryColor, Shape shape) {
-        this.graphics2d = graphics;
+    public RectangleStrategy(ShapeColor primaryColor, ShapeColor secondaryColor, Shape shape, Graphics2D graphics) {
         this.primaryColor = primaryColor;
         this.secondaryColor = secondaryColor;
         this.shape = shape;
+        this.graphics2d = graphics;
     }
 
     @Override

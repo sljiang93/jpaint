@@ -13,17 +13,17 @@ public class Shape {
     public ShapeColor primaryColor;
     public ShapeColor secondaryColor;
     public ShapeShadingType shadingType;
-    public String clickType;
+    //public String clickType;
 
 
-    public Shape(ShapeType shapeType, Point startPoint, Point endPoint, ShapeColor primaryColor, ShapeColor secondaryColor, ShapeShadingType shadingType, String clickType) {
+    public Shape(ShapeType shapeType, Point startPoint, Point endPoint, ShapeColor primaryColor, ShapeColor secondaryColor, ShapeShadingType shadingType/*, String clickType*/) {
         this.shapeType = shapeType;
         this.startPoint = startPoint;
         this.endPoint = endPoint;
         this.primaryColor = primaryColor;
         this.secondaryColor = secondaryColor;
         this.shadingType = shadingType;
-        this.clickType = clickType;
+        //this.clickType = clickType;
 
         xMin = Math.min(startPoint.x, endPoint.x);
         xMax = Math.max(startPoint.x, endPoint.x);

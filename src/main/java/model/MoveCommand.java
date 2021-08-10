@@ -61,7 +61,7 @@ public class MoveCommand implements ICommand,IUndoable {
         selectedShape.addX(dX);
         selectedShape.addY(dY);
 
-        CreateShapeCommand createShapeCommand = new CreateShapeCommand(shapeFactory, shapeType, mousePress, mouseRelease,clickType);
+        CreateShapeCommand createShapeCommand = new CreateShapeCommand(shapeFactory, shapeType, mousePress, mouseRelease/*,clickType*/);
         createShapeCommand.run();
 
 

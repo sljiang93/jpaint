@@ -14,27 +14,25 @@ public class CreateShapeCommand implements ICommand,IUndoable {
     public Point startPoint;
     public Point endPoint;
     public Shape shape;
-    public String clickType;
 
-    public CreateShapeCommand(ShapeMaker shapeMaker, ShapeType shapeType, Point startPoint, Point endPoint, String clickType) {
+    public CreateShapeCommand(ShapeMaker shapeMaker, ShapeType shapeType, Point startPoint, Point endPoint/*, String clickType*/) {
         this.shapeMaker = shapeMaker;
         this.shapeType = shapeType;
         this.startPoint = startPoint;
         this.endPoint = endPoint;
-        this.clickType = clickType;
     }
 
     @Override
     public void run() {
         Shape shape = new Shape(shapeType, startPoint, endPoint, shapeMaker.appState.getActivePrimaryColor(),
-                shapeMaker.appState.getActiveSecondaryColor(), shapeMaker.appState.getActiveShapeShadingType(), clickType);
+                shapeMaker.appState.getActiveSecondaryColor(), shapeMaker.appState.getActiveShapeShadingType()/*, clickType*/);
 
         shapeMaker.shapeList.masterShapeList.add(shape);
         shapeMaker.shapeList.drawShapeHandler.update(shapeMaker.shapeList.masterShapeList);
         CommandHistory.add(this);
     }
 
-    public int toSize(){
+    public int manageSize(){
         return shapeMaker.shapeList.masterShapeList.size();
     }
 

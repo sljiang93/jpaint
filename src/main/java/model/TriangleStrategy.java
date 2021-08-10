@@ -13,11 +13,11 @@ public class TriangleStrategy implements IShapeStrategy {
 
 
 
-    public TriangleStrategy(Graphics2D graphics, ShapeColor primaryColor, ShapeColor secondaryColor, Shape shape) {
-        this.graphics2d = graphics;
+    public TriangleStrategy(ShapeColor primaryColor, ShapeColor secondaryColor, Shape shape, Graphics2D graphics) {
         this.primaryColor = primaryColor;
         this.secondaryColor = secondaryColor;
         this.shape = shape;
+        this.graphics2d = graphics;
     }
 
     @Override

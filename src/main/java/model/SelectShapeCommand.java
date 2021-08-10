@@ -26,17 +26,16 @@ public class SelectShapeCommand implements ICommand{
     public int height, width;
     public int xMin, xMax, yMin, yMax,xBox,yBox;
     public Point boxStart,boxEnd;
-    public ShapeMaker shapeFactory;
+    public ShapeMaker shapeMaker;
     public Shape shape;
     public static SelectShapeCommand box;
     public ShapeType shapeType;
-    public String clickType;
     public IDrawShapeHandler selectedShape;
 
 
 
-    public SelectShapeCommand (ShapeMaker shapeFactory,Point boxStart,Point boxEnd){
-        this.shapeFactory = shapeFactory;
+    public SelectShapeCommand (ShapeMaker shapeMaker,Point boxStart,Point boxEnd){
+        this.shapeMaker = shapeMaker;
         this.boxStart=boxStart;
         this.boxEnd=boxEnd;
     }
@@ -45,11 +44,11 @@ public class SelectShapeCommand implements ICommand{
 
     @Override
     public void run() {
-        selectAdd(shapeFactory.shapeList.masterShapeList);
-        Shape shape = new Shape(shapeType, startPoint, endPoint, shapeFactory.appState.getActivePrimaryColor(),
-                shapeFactory.appState.getActiveSecondaryColor(), shapeFactory.appState.getActiveShapeShadingType(), clickType);
-        shapeFactory.shapeList.masterShapeList.add(shape);
-        shapeFactory.shapeList.drawShapeHandler.update(shapeFactory.shapeList.masterShapeList);
+        selectAdd(shapeMaker.shapeList.masterShapeList);
+        Shape shape = new Shape(shapeType, startPoint, endPoint, shapeMaker.appState.getActivePrimaryColor(),
+                shapeMaker.appState.getActiveSecondaryColor(), shapeMaker.appState.getActiveShapeShadingType()/*, clickType*/);
+        shapeMaker.shapeList.masterShapeList.add(shape);
+        shapeMaker.shapeList.drawShapeHandler.update(shapeMaker.shapeList.masterShapeList);
 
 
 
@@ -81,15 +80,19 @@ public class SelectShapeCommand implements ICommand{
         yBox = boxEnd.y;
 
         for (Shape shape: masterShapeList){
-            if (xBox>=xMin&&yBox<=yMax){
+            if (xBox<=xMin&&yBox>=yMax){
                 System.out.println("select success");
                 
 
-                shapeFactory.shapeList.masterShapeList.add(shape);
+                shapeMaker.shapeList.masterShapeList.add(shape);
+                masterShapeList.stream().forEach(System.out::println);
+               
+              
                
 
             }else{
                 System.out.println("select fail");
+                
             }
         }
 

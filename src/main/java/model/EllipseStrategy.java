@@ -14,11 +14,11 @@ public class EllipseStrategy implements IShapeStrategy {
     private Shape shape;
 
 
-    public EllipseStrategy(Graphics2D graphics, ShapeColor primaryColor, ShapeColor secondaryColor, Shape shape) {
-        this.graphics2d = graphics;
+    public EllipseStrategy(ShapeColor primaryColor, ShapeColor secondaryColor, Shape shape, Graphics2D graphics) {
         this.primaryColor = primaryColor;
         this.secondaryColor = secondaryColor;
         this.shape = shape;
+        this.graphics2d = graphics;
     }
 
     @Override

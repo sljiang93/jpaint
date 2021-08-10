@@ -22,7 +22,7 @@ public class PasteCommand implements ICommand,IUndoable{
             shape.endPoint.x = shape.endPoint.x+ 100;
             shape.endPoint.y = shape.endPoint.y+ 100;
 
-            Shape dupliShape = new Shape(shape.shapeType, shape.startPoint, shape.endPoint, shape.primaryColor, shape.secondaryColor, shape.shadingType, shape.clickType);
+            Shape dupliShape = new Shape(shape.shapeType, shape.startPoint, shape.endPoint, shape.primaryColor, shape.secondaryColor, shape.shadingType/*, shape.clickType*/);
 
             shapeList.masterShapeList.add(dupliShape);
             CommandHistory.add(this);

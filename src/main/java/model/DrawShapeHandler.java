@@ -30,13 +30,13 @@ public class DrawShapeHandler implements IDrawShapeHandler {
 
             switch(shape.shapeType){
                 case RECTANGLE:
-                    shapeStrategy = new RectangleStrategy(graphics, shape.primaryColor, shape.secondaryColor, shape);
+                    shapeStrategy = new RectangleStrategy(shape.primaryColor, shape.secondaryColor, shape, graphics);
                     break;
                 case TRIANGLE:
-                    shapeStrategy = new TriangleStrategy(graphics, shape.primaryColor, shape.secondaryColor, shape);
+                    shapeStrategy = new TriangleStrategy(shape.primaryColor, shape.secondaryColor, shape,graphics);
                     break;
                 case ELLIPSE:
-                    shapeStrategy = new EllipseStrategy(graphics, shape.primaryColor, shape.secondaryColor, shape);
+                    shapeStrategy = new EllipseStrategy(shape.primaryColor, shape.secondaryColor, shape, graphics);
                     break;
 
 
