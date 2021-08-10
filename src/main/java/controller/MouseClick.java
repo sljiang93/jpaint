@@ -8,14 +8,14 @@ import java.awt.event.MouseEvent;
 
 public class MouseClick extends MouseAdapter {
 
-    public ShapeFactory shapeFactory;
+    public ShapeMaker shapeFactory;
     public ShapeType shapeType;
     public Point startPoint;
     public Point endPoint;
     public String clickType;
 
 
-    public MouseClick(ShapeFactory shapeFactory) {
+    public MouseClick(ShapeMaker shapeFactory) {
         this.shapeFactory = shapeFactory;
     }
 

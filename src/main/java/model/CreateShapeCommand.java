@@ -9,15 +9,15 @@ import java.awt.*;
 
 public class CreateShapeCommand implements ICommand,IUndoable {
 
-    public ShapeFactory shapeFactory;
+    public ShapeMaker shapeMaker;
     public ShapeType shapeType;
     public Point startPoint;
     public Point endPoint;
     public Shape shape;
     public String clickType;
 
-    public CreateShapeCommand(ShapeFactory shapeFactory, ShapeType shapeType, Point startPoint, Point endPoint, String clickType) {
-        this.shapeFactory = shapeFactory;
+    public CreateShapeCommand(ShapeMaker shapeMaker, ShapeType shapeType, Point startPoint, Point endPoint, String clickType) {
+        this.shapeMaker = shapeMaker;
         this.shapeType = shapeType;
         this.startPoint = startPoint;
         this.endPoint = endPoint;
@@ -26,16 +26,16 @@ public class CreateShapeCommand implements ICommand,IUndoable {
 
     @Override
     public void run() {
-        Shape shape = new Shape(shapeType, startPoint, endPoint, shapeFactory.appState.getActivePrimaryColor(),
-                shapeFactory.appState.getActiveSecondaryColor(), shapeFactory.appState.getActiveShapeShadingType(), clickType);
+        Shape shape = new Shape(shapeType, startPoint, endPoint, shapeMaker.appState.getActivePrimaryColor(),
+                shapeMaker.appState.getActiveSecondaryColor(), shapeMaker.appState.getActiveShapeShadingType(), clickType);
 
-        shapeFactory.shapeList.masterShapeList.add(shape);
-        shapeFactory.shapeList.drawShapeHandler.update(shapeFactory.shapeList.masterShapeList);
+        shapeMaker.shapeList.masterShapeList.add(shape);
+        shapeMaker.shapeList.drawShapeHandler.update(shapeMaker.shapeList.masterShapeList);
         CommandHistory.add(this);
     }
 
     public int toSize(){
-        return shapeFactory.shapeList.masterShapeList.size();
+        return shapeMaker.shapeList.masterShapeList.size();
     }
 
     @Override

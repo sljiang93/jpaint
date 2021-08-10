@@ -26,7 +26,7 @@ public class SelectShapeCommand implements ICommand{
     public int height, width;
     public int xMin, xMax, yMin, yMax,xBox,yBox;
     public Point boxStart,boxEnd;
-    public ShapeFactory shapeFactory;
+    public ShapeMaker shapeFactory;
     public Shape shape;
     public static SelectShapeCommand box;
     public ShapeType shapeType;
@@ -35,7 +35,7 @@ public class SelectShapeCommand implements ICommand{
 
 
 
-    public SelectShapeCommand (ShapeFactory shapeFactory,Point boxStart,Point boxEnd){
+    public SelectShapeCommand (ShapeMaker shapeFactory,Point boxStart,Point boxEnd){
         this.shapeFactory = shapeFactory;
         this.boxStart=boxStart;
         this.boxEnd=boxEnd;

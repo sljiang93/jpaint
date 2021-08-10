@@ -4,7 +4,7 @@ import controller.IJPaintController;
 import controller.JPaintController;
 import controller.MouseClick;
 import model.Shape;
-import model.ShapeFactory;
+import model.ShapeMaker;
 import model.DrawShapeHandler;
 import model.interfaces.IShapeStrategy;
 import model.persistence.ApplicationState;
@@ -48,7 +48,7 @@ public class Main {
         IJPaintController controller = new JPaintController(uiModule, appState, shapeList,  commandHistoryRedo, commandHistoryRedo, commandHistoryRedo, commandHistoryRedo, paintCanvas);
 
 
-        ShapeFactory shapeFactory = new ShapeFactory(appState, shapeList, commandHistoryRedo, commandHistoryRedo);
+        ShapeMaker shapeFactory = new ShapeMaker(appState, shapeList, commandHistoryRedo, commandHistoryRedo);
 
 
         MouseClick mouseClick = new MouseClick(shapeFactory);

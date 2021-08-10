@@ -10,12 +10,12 @@ public class EllipseStrategy implements IShapeStrategy {
     private ShapeColor primaryColor;
     private ShapeColor secondaryColor;
     private ShapeShadingType shapeShadingType;
-    private Graphics2D graphics;
+    private Graphics2D graphics2d;
     private Shape shape;
 
 
     public EllipseStrategy(Graphics2D graphics, ShapeColor primaryColor, ShapeColor secondaryColor, Shape shape) {
-        this.graphics = graphics;
+        this.graphics2d = graphics;
         this.primaryColor = primaryColor;
         this.secondaryColor = secondaryColor;
         this.shape = shape;
@@ -23,11 +23,11 @@ public class EllipseStrategy implements IShapeStrategy {
 
     @Override
     public Color EnumColorMap(ShapeColor shapeColor) {
-        EnumMap<ShapeColor,Color> colorMap = new EnumMap<>(ShapeColor.class);
-        ColorSingleton colorSingleton = ColorSingleton.getInstance(shapeColor,colorMap);
-        Color colorMapped = colorMap.get(shapeColor);
+        EnumMap<ShapeColor,Color> color = new EnumMap<>(ShapeColor.class);
+        ColorSingleton colorSingleton = ColorSingleton.getInstance(shapeColor,color);
+        Color colorChosen = color.get(shapeColor);
 
-        return colorMapped;
+        return colorChosen;
     }
 
     @Override
@@ -35,28 +35,28 @@ public class EllipseStrategy implements IShapeStrategy {
         switch(shape.shadingType){
             case FILLED_IN:
                 Color primaryF = EnumColorMap(primaryColor);
-                graphics.setColor(primaryF);
-                graphics.setStroke(new BasicStroke(5));
-                graphics.fillOval(shape.getXMin(), shape.getYMin(), shape.getWidth(), shape.getHeight());
+                graphics2d.setColor(primaryF);
+                graphics2d.setStroke(new BasicStroke(5));
+                graphics2d.fillOval(shape.getXMin(), shape.getYMin(), shape.getWidth(), shape.getHeight());
                 break;
 
             case OUTLINE:
                 Color primaryO = EnumColorMap(primaryColor);
-                graphics.setColor(primaryO);
-                graphics.setStroke(new BasicStroke(5));
-                graphics.drawOval(shape.getXMin(), shape.getYMin(), shape.getWidth(), shape.getHeight());
+                graphics2d.setColor(primaryO);
+                graphics2d.setStroke(new BasicStroke(5));
+                graphics2d.drawOval(shape.getXMin(), shape.getYMin(), shape.getWidth(), shape.getHeight());
                 break;
 
             case OUTLINE_AND_FILLED_IN:
                 Color primaryOF = EnumColorMap(primaryColor);
-                graphics.setColor(primaryOF);
-                graphics.setStroke(new BasicStroke(5));
-                graphics.fillOval(shape.getXMin(), shape.getYMin(), shape.getWidth(), shape.getHeight());
+                graphics2d.setColor(primaryOF);
+                graphics2d.setStroke(new BasicStroke(5));
+                graphics2d.fillOval(shape.getXMin(), shape.getYMin(), shape.getWidth(), shape.getHeight());
 
                 Color secondaryOF = EnumColorMap(secondaryColor);
-                graphics.setColor(secondaryOF);
-                graphics.setStroke(new BasicStroke(5));
-                graphics.drawOval(shape.getXMin(), shape.getYMin(), shape.getWidth(), shape.getHeight());
+                graphics2d.setColor(secondaryOF);
+                graphics2d.setStroke(new BasicStroke(5));
+                graphics2d.drawOval(shape.getXMin(), shape.getYMin(), shape.getWidth(), shape.getHeight());
                 break;
 
 

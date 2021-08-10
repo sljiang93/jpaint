@@ -4,41 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="349a2f7b-8ba5-4aa9-8126-33f4ae4690a3" name="Default Changelist" comment="delete">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+    <list default="true" id="349a2f7b-8ba5-4aa9-8126-33f4ae4690a3" name="Default Changelist" comment="activemousemode huge cosmetic problem">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/controller/JPaintController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/controller/JPaintController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/dialogs/ChooseStartAndEndPointModeDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/dialogs/ChooseStartAndEndPointModeDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/dialogs/DialogProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/dialogs/DialogProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/interfaces/IApplicationState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/interfaces/IApplicationState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/interfaces/IDialogProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/interfaces/IDialogProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/model/persistence/ApplicationState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/persistence/ApplicationState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/view/EventName$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/view/EventName$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/view/EventName$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/view/EventName$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/view/EventName$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/view/EventName$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/view/EventName$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/view/EventName$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/view/EventName.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/view/EventName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/view/gui/PaintCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/view/gui/PaintCanvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/interfaces/IApplicationState.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/interfaces/IApplicationState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/persistence/ApplicationState.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/persistence/ApplicationState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/JPaintController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/JPaintController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MouseClick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MouseClick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/StartAndEndPointMode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dialogs/ChooseStartAndEndPointModeDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dialogs/ChooseStartAndEndPointModeDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dialogs/DialogProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dialogs/DialogProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/interfaces/IApplicationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/interfaces/IApplicationState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/interfaces/IDialogProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/interfaces/IDialogProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/persistence/ApplicationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/persistence/ApplicationState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/EventName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/EventName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/PaintCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/gui/PaintCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/model/EllipseStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/EllipseStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/model/RectangleStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/RectangleStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/model/TriangleStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/TriangleStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/model/interfaces/IShapeStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/interfaces/IShapeStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/interfaces/IShapeStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/interfaces/IShapeStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,6 +272,9 @@
       <workItem from="1628307197953" duration="636000" />
       <workItem from="1628548897626" duration="954000" />
       <workItem from="1628605842973" duration="9000" />
+      <workItem from="1628606337461" duration="193000" />
+      <workItem from="1628606951121" duration="9000" />
+      <workItem from="1628607279328" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="some significant bugs remain but I've move mouseClick and added commands such as redo and undo. CreateShape and DrawShape are a work in progress. More to come.">
       <created>1627091474856</created>
@@ -336,7 +311,21 @@
       <option name="project" value="LOCAL" />
       <updated>1628307275101</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="delete">
+      <created>1628606391343</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1628606391343</updated>
+    </task>
+    <task id="LOCAL-00007" summary="activemousemode huge cosmetic problem">
+      <created>1628606533037</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1628606533037</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,6 +349,7 @@
     <MESSAGE value="copy/paste plus some bug fixes" />
     <MESSAGE value="some changes to select" />
     <MESSAGE value="delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete" />
+    <MESSAGE value="activemousemode huge cosmetic problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="activemousemode huge cosmetic problem" />
   </component>
 </project>

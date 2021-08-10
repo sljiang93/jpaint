@@ -12,7 +12,7 @@ import java.awt.Point;
 
 public class MoveCommand implements ICommand,IUndoable {
 
-    public ShapeFactory shapeFactory;
+    public ShapeMaker shapeFactory;
     public ShapeType shapeType;
     public Point mousePress;
     public Point mouseRelease;
@@ -27,7 +27,7 @@ public class MoveCommand implements ICommand,IUndoable {
     public int dX,dY;
     public IDrawShapeHandler selectedShape;
 
-    public MoveCommand (ShapeFactory shapeFactory, ShapeType shapeType, Point mousePress, Point mouseRelease){
+    public MoveCommand (ShapeMaker shapeFactory, ShapeType shapeType, Point mousePress, Point mouseRelease){
         this.shapeFactory = shapeFactory;
         this.shapeType = shapeType;
         this.mousePress = mousePress;
