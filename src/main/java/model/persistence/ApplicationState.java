@@ -1,16 +1,19 @@
 package model.persistence;
 
 import model.*;
+import model.ShapeColor;
+import model.ShapeShadingType;
+import model.ShapeType;
+import model.MouseMode;
 import model.dialogs.DialogProvider;
 import model.interfaces.IApplicationState;
 import model.interfaces.IDialogProvider;
 import view.interfaces.IUiModule;
 import java.awt.Point;
-import java.io.Serializable;
 import controller.MouseClick;
 
-public class ApplicationState implements IApplicationState, Serializable {
-    //private static final long serialVersionUID = -5545483996576839007L;
+public class ApplicationState implements IApplicationState{
+
     private final IUiModule uiModule;
     private final IDialogProvider dialogProvider;
 
@@ -18,7 +21,7 @@ public class ApplicationState implements IApplicationState, Serializable {
     private ShapeColor activePrimaryColor;
     private ShapeColor activeSecondaryColor;
     private ShapeShadingType activeShapeShadingType;
-    private StartAndEndPointMode activeStartAndEndPointMode;
+    private MouseMode activeMouseMode;
     private Point startPoint;
     private Point endPoint;
 
@@ -50,17 +53,17 @@ public class ApplicationState implements IApplicationState, Serializable {
 
     @Override
     public void setActiveStartAndEndPointMode() {
-        activeStartAndEndPointMode = uiModule.getDialogResponse(dialogProvider.getChooseStartAndEndPointModeDialog());
+        activeMouseMode = uiModule.getDialogResponse(dialogProvider.getChooseStartAndEndPointModeDialog());
     }
 
     @Override
     public void CopyCommand() { }  
 
-    /*@Override
+    @Override
     public void DeleteCommand() { }
 
     @Override
-    public void PasteCommand() { }*/
+    public void PasteCommand() { }
 
     @Override
     public void UndoCommand() { }
@@ -88,8 +91,8 @@ public class ApplicationState implements IApplicationState, Serializable {
     }
 
     @Override
-    public StartAndEndPointMode getActiveStartAndEndPointMode() {
-        return activeStartAndEndPointMode;
+    public MouseMode getActiveMouseMode() {
+        return activeMouseMode;
     }
 
     public Point getStartPoint(){
@@ -118,6 +121,6 @@ public class ApplicationState implements IApplicationState, Serializable {
         activePrimaryColor = ShapeColor.BLUE;
         activeSecondaryColor = ShapeColor.GREEN;
         activeShapeShadingType = ShapeShadingType.FILLED_IN;
-        activeStartAndEndPointMode = StartAndEndPointMode.DRAW;
+        activeMouseMode = MouseMode.DRAW;
     }
 }

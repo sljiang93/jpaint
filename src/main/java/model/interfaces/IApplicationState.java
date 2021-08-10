@@ -3,7 +3,7 @@ package model.interfaces;
 import model.ShapeColor;
 import model.ShapeShadingType;
 import model.ShapeType;
-import model.StartAndEndPointMode;
+import model.MouseMode;
 
 public interface IApplicationState {
     void setActiveShape();
@@ -17,13 +17,6 @@ public interface IApplicationState {
     void setActiveStartAndEndPointMode();
 
 
-
-    void CopyCommand();
-    //void DeleteCommand();
-    //void PasteCommand();
-    void UndoCommand();
-    void RedoCommand();
-
     ShapeType getActiveShapeType();
 
     ShapeColor getActivePrimaryColor();
@@ -32,7 +25,17 @@ public interface IApplicationState {
 
     ShapeShadingType getActiveShapeShadingType();
 
-    StartAndEndPointMode getActiveStartAndEndPointMode();
+    MouseMode getActiveMouseMode();
+
+    void CopyCommand();
+
+    void DeleteCommand();
+
+    void PasteCommand();
+
+    void UndoCommand();
+    
+    void RedoCommand();
 
 
 

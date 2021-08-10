@@ -16,6 +16,9 @@ import view.interfaces.IUiModule;
 import java.util.List;
 
 import model.ShapeList;
+import java.awt.*;
+import java.util.Collection;
+import java.util.EnumMap;
 
 import java.util.ArrayList;
 
@@ -25,6 +28,8 @@ public class Main {
         IGuiWindow guiWindow = new GuiWindow(paintCanvas);
         IUiModule uiModule = new Gui(guiWindow);
         ApplicationState appState = new ApplicationState(uiModule);
+        //IJPaintController controller = new JPaintController(uiModule, appState);
+        //controller.setup();
 
 
         List<Shape> selectedShapeList = new ArrayList<>();

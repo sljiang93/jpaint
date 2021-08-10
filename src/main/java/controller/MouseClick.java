@@ -43,13 +43,13 @@ public class MouseClick extends MouseAdapter {
 
         ICommand shapeCommand = null;
 
-        if(shapeFactory.appState.getActiveStartAndEndPointMode()== StartAndEndPointMode.DRAW) {
+        if(shapeFactory.appState.getActiveMouseMode()== MouseMode.DRAW) {
             shapeCommand = new CreateShapeCommand(shapeFactory, shapeType, startPoint, endPoint, clickType);
         }
-        else if(shapeFactory.appState.getActiveStartAndEndPointMode()==StartAndEndPointMode.SELECT) {
+        else if(shapeFactory.appState.getActiveMouseMode()==MouseMode.SELECT) {
             shapeCommand = new SelectShapeCommand(shapeFactory,startPoint, endPoint);
         }
-        else if(shapeFactory.appState.getActiveStartAndEndPointMode()==StartAndEndPointMode.MOVE){
+        else if(shapeFactory.appState.getActiveMouseMode()==MouseMode.MOVE){
         shapeCommand = new MoveCommand(shapeFactory, shapeType, startPoint, endPoint);
         }
 
