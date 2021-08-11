@@ -34,5 +34,11 @@ public class CommandHistory {
         return result;
     }
 
+    public int sizeOf(){
+        return undoStack.size();
+    }
+
+
+
 
 }

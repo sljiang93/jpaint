@@ -1,13 +1,13 @@
 package model;
-
-import model.interfaces.IShapeStrategy;
-import controller.MouseClick;
 import java.awt.*;
+import model.interfaces.IShape;
 import java.util.EnumMap;
+import controller.MouseClick;
 
-public class TriangleStrategy implements IShapeStrategy {
-    private ShapeColor primaryColor;
-    private ShapeColor secondaryColor;
+
+
+public class TriangleStrategy implements IShape {
+    private ShapeColor primaryColor, secondaryColor;
     private Graphics2D graphics2d;
     private Shape shape;
 
@@ -23,7 +23,7 @@ public class TriangleStrategy implements IShapeStrategy {
     @Override
     public Color EnumColorMap(ShapeColor shapeColor) {
         EnumMap<ShapeColor, Color> color = new EnumMap<>(ShapeColor.class);
-        ColorSingleton colorSingleton = ColorSingleton.getInstance(shapeColor,color);
+        ColorClass colorSingleton = ColorClass.getColor(shapeColor,color);
         Color colorChosen = color.get(shapeColor);
 
         return colorChosen;

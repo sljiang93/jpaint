@@ -269,6 +269,7 @@
       <workItem from="1628606951121" duration="9000" />
       <workItem from="1628607279328" duration="48000" />
       <workItem from="1628618215201" duration="38000" />
+      <workItem from="1628632213498" duration="30000" />
     </task>
     <task id="LOCAL-00001" summary="some significant bugs remain but I've move mouseClick and added commands such as redo and undo. CreateShape and DrawShape are a work in progress. More to come.">
       <created>1627091474856</created>
@@ -326,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628618243400</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="change">
+      <created>1628632229007</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1628632229007</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

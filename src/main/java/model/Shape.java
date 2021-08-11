@@ -1,6 +1,7 @@
 package model;
 
 import java.awt.Point;
+import model.persistence.ApplicationState;
 
 public class Shape {
 
@@ -9,21 +10,22 @@ public class Shape {
     public Point startPoint;
     public Point endPoint;
     public int height, width;
-    public int xMin, xMax, yMin, yMax, triangleMidPoint;
+    public int xMin, xMax, yMin, yMax, middle;
     public ShapeColor primaryColor;
     public ShapeColor secondaryColor;
     public ShapeShadingType shadingType;
-    //public String clickType;
+    public ApplicationState appState;
 
 
-    public Shape(ShapeType shapeType, Point startPoint, Point endPoint, ShapeColor primaryColor, ShapeColor secondaryColor, ShapeShadingType shadingType/*, String clickType*/) {
+
+    public Shape(ShapeType shapeType, Point startPoint, Point endPoint, ShapeColor primaryColor, ShapeColor secondaryColor, ShapeShadingType shadingType, ApplicationState appState) {
         this.shapeType = shapeType;
         this.startPoint = startPoint;
         this.endPoint = endPoint;
         this.primaryColor = primaryColor;
         this.secondaryColor = secondaryColor;
         this.shadingType = shadingType;
-        //this.clickType = clickType;
+        this.appState = appState;
 
         xMin = Math.min(startPoint.x, endPoint.x);
         xMax = Math.max(startPoint.x, endPoint.x);
@@ -33,16 +35,14 @@ public class Shape {
 
         width = xMax-xMin;
         height = yMax-yMin;
-        triangleMidPoint = (xMin)+((xMax-xMin)/2);
+        middle = (xMin)+((xMax-xMin)/2);
     }
 
-
-    public boolean containsPoint(int x, int y){
-        if(x>= startPoint.x && x<startPoint.x+width && y>startPoint.y && y <startPoint.y + height){
-            return true;
-        }
-        else
-            return false;
+    public void shapeStats(){
+        this.shapeType = appState.getActiveShapeType();
+		this.primaryColor = appState.getActivePrimaryColor();
+		this.secondaryColor = appState.getActiveSecondaryColor();
+		this.shadingType = appState.getActiveShapeShadingType();
     }
 
 
@@ -58,7 +58,7 @@ public class Shape {
 
     public int getWidth(){ return width; }
 
-    public int getTriangleMidPoint(){ return triangleMidPoint;}
+    public int getTriangleMidPoint(){ return middle;}
 
 }
 

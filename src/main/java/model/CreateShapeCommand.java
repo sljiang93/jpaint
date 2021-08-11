@@ -11,8 +11,7 @@ public class CreateShapeCommand implements ICommand,IUndoable {
 
     public ShapeMaker shapeMaker;
     public ShapeType shapeType;
-    public Point startPoint;
-    public Point endPoint;
+    public Point startPoint,endPoint;
     public Shape shape;
 
     public CreateShapeCommand(ShapeMaker shapeMaker, ShapeType shapeType, Point startPoint, Point endPoint/*, String clickType*/) {
@@ -25,7 +24,7 @@ public class CreateShapeCommand implements ICommand,IUndoable {
     @Override
     public void run() {
         Shape shape = new Shape(shapeType, startPoint, endPoint, shapeMaker.appState.getActivePrimaryColor(),
-                shapeMaker.appState.getActiveSecondaryColor(), shapeMaker.appState.getActiveShapeShadingType()/*, clickType*/);
+                shapeMaker.appState.getActiveSecondaryColor(), shapeMaker.appState.getActiveShapeShadingType(), null);
 
         shapeMaker.shapeList.masterShapeList.add(shape);
         shapeMaker.shapeList.drawShapeHandler.update(shapeMaker.shapeList.masterShapeList);
@@ -39,6 +38,7 @@ public class CreateShapeCommand implements ICommand,IUndoable {
     @Override
     public void undo(){
         CommandHistory.undo();
+        
     }
 
     @Override

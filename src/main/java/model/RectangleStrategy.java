@@ -1,14 +1,13 @@
 package model;
 
-import model.interfaces.IShapeStrategy;
+import model.interfaces.IShape;
 
 import java.awt.*;
 import java.util.EnumMap;
 import java.awt.Graphics2D;
 
-public class RectangleStrategy implements IShapeStrategy {
-    private ShapeColor primaryColor;
-    private ShapeColor secondaryColor;
+public class RectangleStrategy implements IShape {
+    private ShapeColor primaryColor, secondaryColor;
     private Graphics2D graphics2d;
     private Shape shape;
 
@@ -23,7 +22,7 @@ public class RectangleStrategy implements IShapeStrategy {
     @Override
     public Color EnumColorMap(ShapeColor shapeColor) {
         EnumMap<ShapeColor,Color> color = new EnumMap<>(ShapeColor.class);
-        ColorSingleton colorSingleton = ColorSingleton.getInstance(shapeColor,color);
+        ColorClass colorSingleton = ColorClass.getColor(shapeColor,color);
         Color colorChosen = color.get(shapeColor);
         return colorChosen;
     }
