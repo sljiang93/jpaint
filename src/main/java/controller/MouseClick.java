@@ -4,7 +4,7 @@ import model.*;
 import model.Shape;
 import model.interfaces.ICommand;
 import view.gui.PaintCanvas;
-
+import model.persistence.ApplicationState;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -56,10 +56,23 @@ public class MouseClick extends MouseAdapter {
         ICommand shapeManeuver = null;
 
        
+        switch(shapeMaker.appState.getActiveMouseMode()){
+            
+            case DRAW:
+            shapeManeuver=new CreateShapeCommand(shapeMaker, shapeType, startPoint, endPoint);
+            break;
+            case SELECT:
+            shapeManeuver = new SelectShapeCommand(shapeMaker, startPoint, endPoint, shapeType);
+            break;
+            case MOVE:
+            shapeManeuver = new MoveCommand(shapeMaker, shapeType, startPoint, endPoint);
+            break;}
 
+            
+        
   
 
-        if(shapeMaker.appState.getActiveMouseMode()== MouseMode.DRAW) {
+        /*if(shapeMaker.appState.getActiveMouseMode()== MouseMode.DRAW) {
             shapeManeuver = new CreateShapeCommand(shapeMaker, shapeType, startPoint, endPoint);
         }
         else if(shapeMaker.appState.getActiveMouseMode()==MouseMode.SELECT) {
@@ -67,7 +80,7 @@ public class MouseClick extends MouseAdapter {
         }
         else if(shapeMaker.appState.getActiveMouseMode()==MouseMode.MOVE){
         shapeManeuver = new MoveCommand(shapeMaker, startPoint, endPoint, shape);
-        }
+        }*/
 
         shapeManeuver.run();
     }

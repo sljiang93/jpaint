@@ -38,12 +38,14 @@ public class CreateShapeCommand implements ICommand,IUndoable {
     @Override
     public void undo(){
         CommandHistory.undo();
+        //shape.shapeList.removeShape(shape);
         
     }
 
     @Override
     public void redo(){
         CommandHistory.redo();
+        //shape.shapeList.addShape(shape);
     }
 }
 
