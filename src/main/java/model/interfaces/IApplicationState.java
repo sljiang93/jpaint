@@ -32,10 +32,10 @@ public interface IApplicationState {
     void DeleteCommand();
 
     void PasteCommand();
-
-    void UndoCommand();
     
     void RedoCommand();
+
+    void UndoCommand();
 
 
 

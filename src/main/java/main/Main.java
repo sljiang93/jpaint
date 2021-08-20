@@ -28,21 +28,17 @@ public class Main {
         IGuiWindow guiWindow = new GuiWindow(paintCanvas);
         IUiModule uiModule = new Gui(guiWindow);
         ApplicationState appState = new ApplicationState(uiModule);
-
-
-
         List<Shape> selectedShapeList = new ArrayList<>();
         List<Shape> masterShapeList = new ArrayList<>();
         List<Shape> copiedShapeList = new ArrayList<>();
         List<Shape>movedShapeList = new ArrayList<>();
         List<Shape>whiteOutList = new ArrayList<>();
-
+        List<Shape>copyList= new ArrayList<>();
         List<Shape> commandHistoryUndo = new ArrayList<>();
         List<Shape> commandHistoryRedo = new ArrayList<>(); ;
         List<Shape> groupList = new ArrayList<>();
-        List<Shape> copyList = new ArrayList<>();
         IShape shapeStrategy=null;
-        ShapeList shapeList = new ShapeList(new DrawShapeStrategy(paintCanvas, shapeStrategy), masterShapeList, commandHistoryUndo, commandHistoryRedo,selectedShapeList, groupList,copyList);
+        ShapeList shapeList = new ShapeList(new DrawShapeStrategy(paintCanvas,shapeStrategy), masterShapeList, commandHistoryUndo, commandHistoryRedo,selectedShapeList, groupList,copyList);
         IJPaintController controller = new JPaintController(uiModule, appState, shapeList,  selectedShapeList, copiedShapeList,commandHistoryUndo,commandHistoryRedo);
         ShapeMaker shapeMaker = new ShapeMaker(appState, shapeList, selectedShapeList, movedShapeList, copiedShapeList,groupList,whiteOutList);
         MouseClick mouseClick = new MouseClick(shapeMaker);

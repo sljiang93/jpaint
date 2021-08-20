@@ -8,14 +8,13 @@ import java.util.ArrayList;
 
 public class ShapeList{
 
-    public DrawShapeStrategy drawShapeStrategy;
     public Shape shape;
-    public List<Shape> commandHistoryUndo;
-    public List<Shape> commandHistoryRedo;
+    public List<Shape> commandHistoryUndo,commandHistoryRedo;
     public List<Shape> selectedShapeList;
     public List<Shape> masterShapeList;
     public List<Shape> groupList;
     public List<Shape> copyList;
+    public DrawShapeStrategy drawShapeStrategy;
     IApplicationState applicationState;
     public ShapeList(DrawShapeStrategy drawShapeStrategy, List<Shape> masterShapeList,List<Shape> commandHistoryUndo, List<Shape> commandHistoryRedo, List<Shape> selectedShapeList, List<Shape> groupList, List<Shape> copyList)
     {
