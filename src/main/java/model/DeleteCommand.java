@@ -27,8 +27,8 @@ public class DeleteCommand implements ICommand,IUndoable{
     @Override
     public void undo() {
         CommandHistory.undo();
-        shapeList.addShape(shapeList.masterShapeList.get(shapeList.getSize()-1));
-        //shapeList.repainter();
+        shapeList.addShape(shapeList.selectedShapeList.get(shapeList.getSize()-1));
+        shapeList.repainter();
         shapeList.updater();
         //shapeList.drawUpdate();
         // TODO Auto-generated method stub
@@ -44,7 +44,7 @@ public class DeleteCommand implements ICommand,IUndoable{
 
     @Override
     public void run() {
-        shapeList.masterShapeList.remove(shapeList.getSize()-1);
+        shapeList.selectedShapeList.remove(shapeList.getSize()-1);
         shapeList.repainter();
         shapeList.updater();
         CommandHistory.add(this);

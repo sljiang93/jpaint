@@ -24,7 +24,7 @@ public class SelectShapeCommand implements ICommand {
     @Override
     public void run() {
         selectHelper(shapeMaker.master());
-        //BorderDrawer.drawDash (ShapeList);
+        //BorderDrawer.drawDash (masterShapeList);
     }
 
     public void selectHelper(List<Shape> masterShapeList){

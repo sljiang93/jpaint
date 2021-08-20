@@ -21,10 +21,10 @@ public class JPaintController implements IJPaintController {
 
     public JPaintController(IUiModule uiModule, IApplicationState applicationState, ShapeList shapeList, List<Shape> selectedShapeList,
     List<Shape> copyList, List<Shape> commandHistoryUndo, List<Shape> commandHistoryRedo) {
-        this.shapeList = shapeList;
         this.uiModule = uiModule;
         this.applicationState = applicationState;
         this.selectedShapeList = selectedShapeList;
+        this.shapeList = shapeList;
         this.copyList = copyList;
         this.commandHistoryUndo = commandHistoryUndo;
         this.commandHistoryRedo = commandHistoryRedo;
@@ -48,7 +48,6 @@ public class JPaintController implements IJPaintController {
         uiModule.addEvent(EventName.PASTE, () -> new PasteCommand(shapeList, copyList).run());
 
         uiModule.addEvent(EventName.UNDO, () -> new UndoCommand(commandHistoryUndo, commandHistoryRedo,shapeList).run());
-        //uiModule.addEvent(EventName.UNDO, () -> new UndoCommand().run());
         uiModule.addEvent(EventName.REDO, () -> new RedoCommand(commandHistoryUndo,commandHistoryRedo,shapeList).run());
     }
 }
