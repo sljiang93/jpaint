@@ -17,51 +17,42 @@ public class DeleteCommand implements ICommand,IUndoable{
     public Shape deleteShape;
     public List<Shape> deleted = new ArrayList<Shape>();
     public ShapeList shapeList;
-    public IApplicationState appState;
-    public final int listSize;
 
 
 
-    public void delete(){
-        if (!deleted.isEmpty()){
-
-            shapeList.masterShapeList.remove(listSize-1);
-
-        }else{return;}
-    }
-
-    public DeleteCommand (IApplicationState appState, ShapeList shapeList){
-        this.appState=appState;
+    public DeleteCommand (ShapeList shapeList){
         this.shapeList=shapeList;
-        this.listSize=shapeList.masterShapeList.size();
-        deleteShape = shapeList.masterShapeList.get(listSize-1);
-    }
-
-
-    @Override
-    public void run() {
-        delete();
-        
-        CommandHistory.add(this);
-        // TODO Auto-generated method stub
-        
     }
 
     @Override
     public void undo() {
-        shapeList.masterShapeList.add(deleteShape);
-        shapeList.drawShapeStrategy.paintCanvas.repaint();
-        shapeList.drawShapeStrategy.update(shapeList.masterShapeList);
         CommandHistory.undo();
+        shapeList.addShape(shapeList.masterShapeList.get(shapeList.getSize()-1));
+        //shapeList.repainter();
+        shapeList.updater();
+        //shapeList.drawUpdate();
         // TODO Auto-generated method stub
         
     }
 
     @Override
     public void redo() {
-        delete();
+        run();
         // TODO Auto-generated method stub
         
     }
-    
+
+    @Override
+    public void run() {
+        shapeList.masterShapeList.remove(shapeList.getSize()-1);
+        shapeList.repainter();
+        shapeList.updater();
+        CommandHistory.add(this);
+        //shapeMaker.shapeList.masterShapeList.remove(shapeMaker.recentIndex(shape));
+
+        // TODO Auto-generated method stub
+        
+    }
 }
+
+

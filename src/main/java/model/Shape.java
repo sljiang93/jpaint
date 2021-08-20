@@ -25,10 +25,11 @@ public class Shape {
         xMin = Math.min(startPoint.x, endPoint.x);
         xMax = Math.max(startPoint.x, endPoint.x);
         width = xMax-xMin;
+        middle = (xMax)-((xMax-xMin)/2);
         yMin = Math.min(startPoint.y, endPoint.y);
         yMax = Math.max(startPoint.y, endPoint.y);
         height = yMax-yMin;
-        middle = (xMax)-((xMax-xMin)/2);
+        
     }
 
     public void shapeStats(){

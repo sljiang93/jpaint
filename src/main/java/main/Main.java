@@ -43,7 +43,7 @@ public class Main {
         List<Shape> copyList = new ArrayList<>();
         IShape shapeStrategy=null;
         ShapeList shapeList = new ShapeList(new DrawShapeStrategy(paintCanvas, shapeStrategy), masterShapeList, commandHistoryUndo, commandHistoryRedo,selectedShapeList, groupList,copyList);
-        IJPaintController controller = new JPaintController(uiModule, appState, shapeList,  selectedShapeList, copiedShapeList, commandHistoryUndo, commandHistoryRedo, paintCanvas);
+        IJPaintController controller = new JPaintController(uiModule, appState, shapeList,  selectedShapeList, copiedShapeList,commandHistoryUndo,commandHistoryRedo);
         ShapeMaker shapeMaker = new ShapeMaker(appState, shapeList, selectedShapeList, movedShapeList, copiedShapeList,groupList,whiteOutList);
         MouseClick mouseClick = new MouseClick(shapeMaker);
 

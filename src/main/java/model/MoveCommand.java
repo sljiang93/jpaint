@@ -105,7 +105,7 @@ public class MoveCommand implements ICommand, IUndoable {
             
             shapeMaker.shapeList.masterShapeList.remove(shapeMaker.recentIndex(shape));
   
-            shapeMaker.moveRepaint();
+            //shapeMaker.moveRepaint();
             shapeMaker.drawUpdate();
 
         }else{System.out.println("not enough shapes");

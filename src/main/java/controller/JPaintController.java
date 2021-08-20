@@ -20,7 +20,7 @@ public class JPaintController implements IJPaintController {
     public List<Shape> commandHistoryRedo;
 
     public JPaintController(IUiModule uiModule, IApplicationState applicationState, ShapeList shapeList, List<Shape> selectedShapeList,
-                            List<Shape> copyList, List<Shape> commandHistoryUndo, List<Shape> commandHistoryRedo, PaintCanvas paintCanvas) {
+    List<Shape> copyList, List<Shape> commandHistoryUndo, List<Shape> commandHistoryRedo) {
         this.shapeList = shapeList;
         this.uiModule = uiModule;
         this.applicationState = applicationState;
@@ -28,7 +28,8 @@ public class JPaintController implements IJPaintController {
         this.copyList = copyList;
         this.commandHistoryUndo = commandHistoryUndo;
         this.commandHistoryRedo = commandHistoryRedo;
-        this.paintCanvas = paintCanvas;
+        
+ 
     }
 
     @Override
@@ -42,7 +43,7 @@ public class JPaintController implements IJPaintController {
         uiModule.addEvent(EventName.CHOOSE_SECONDARY_COLOR, () -> applicationState.setActiveSecondaryColor());
         uiModule.addEvent(EventName.CHOOSE_SHADING_TYPE, () -> applicationState.setActiveShadingType());
         uiModule.addEvent(EventName.CHOOSE_MOUSE_MODE, () -> applicationState.setActiveStartAndEndPointMode());
-        //uiModule.addEvent(EventName.DELETE, () -> new DeleteCommand(applicationState, shapeList).run());//applicationState.DeleteCommand());
+        uiModule.addEvent(EventName.DELETE, () -> new DeleteCommand(shapeList).run());//applicationState.DeleteCommand());
         uiModule.addEvent(EventName.COPY, () -> new CopyCommand(masterShapeList,selectedShapeList, copyList, shapeList).run());
         uiModule.addEvent(EventName.PASTE, () -> new PasteCommand(shapeList, copyList).run());
 

@@ -70,7 +70,7 @@ public class TriangleStrategy implements IShape {
 
     public Color ColorMap(ShapeColor shapeColor) {
         EnumMap<ShapeColor, Color> color = new EnumMap<>(ShapeColor.class);
-        ColorAdapter.getColor(shapeColor,color);
+        new ColorAdapter(shapeColor, color);
         return color.get(shapeColor);
     }
 

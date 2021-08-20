@@ -104,6 +104,10 @@ public class ShapeList{
         drawShapeStrategy.update(masterShapeList);
     }
 
+    public void drawUpdate(){
+        this.drawShapeStrategy.update(masterShapeList);
+    }
+
 
 
 }

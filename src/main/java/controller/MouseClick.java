@@ -52,46 +52,22 @@ public class MouseClick extends MouseAdapter {
         ICommand shapeManeuver = null;
 
        
-        /*switch(shapeMaker.appState.getActiveMouseMode()){
+        switch(shapeMaker.appState.getActiveMouseMode()){
             
             case DRAW:
-            shapeManeuver=new CreateShapeCommand(shapeMaker, shapeType, startPoint, endPoint);
+            shapeManeuver=new CreateShape(shapeMaker, shapeType, startPoint, endPoint);
             break;
             case SELECT:
             shapeManeuver = new SelectShapeCommand(shapeMaker, startPoint, endPoint, shapeType);
             break;
             case MOVE:
             shapeManeuver = new MoveCommand(shapeMaker,startPoint, endPoint, shapeType);
-            break;}*/
+            break;}
 
-            
-        
-  
 
-        if(shapeMaker.appState.getActiveMouseMode()== MouseMode.DRAW) {
-            shapeManeuver = new CreateShape(shapeMaker, shapeType, startPoint, endPoint);
-        }
-        else if(shapeMaker.appState.getActiveMouseMode()==MouseMode.SELECT) {
-            shapeManeuver = new SelectShapeCommand(shapeMaker, startPoint, endPoint, shapeType);
-        }
-        else if(shapeMaker.appState.getActiveMouseMode()==MouseMode.MOVE){
-        shapeManeuver = new MoveCommand(shapeMaker, startPoint, endPoint, shapeType);
-        }
         shapeManeuver.run();
     }
 
-    public void mouseEntered(MouseEvent e) {}
-
-    public void mouseExited(MouseEvent e) {}
-
-    public void mouseClicked(MouseEvent e) {}
-
-    public void mouseDragged(MouseEvent e){
-
-        
-       
-      
-     }
 
 
 }
