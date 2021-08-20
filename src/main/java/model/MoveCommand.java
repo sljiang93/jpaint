@@ -4,84 +4,95 @@ import model.interfaces.IShape;
 import model.interfaces.IUndoable;
 import model.interfaces.ICommand;
 import java.util.ArrayList;
-import java.awt.Point;
+import java.awt.*;
 import java.util.List;
+
+import view.gui.PaintCanvas;
+import view.interfaces.PaintCanvasBase;
 
 public class MoveCommand implements ICommand, IUndoable {
 
-    public ShapeType shapeType;
-    public Point mousePressed;
-    public Point mouseReleased;
+    
+    public Point moveStart,moveEnd;
+    private Graphics2D graphics2d;
+    public Shape shape;
+    public Color color;
     public ShapeMaker shapeMaker;
+    public ShapeType shapeType;
     public List<Shape> movedShapeList = new ArrayList<>();
-    public int xs,ys,w,h,xe,ye;
+    public List<Shape> whiteOutList = new ArrayList<>();
+    public int xs,ys,w,h,xe,ye,dX,dY;
 
-    public int dX;
-    public int dY;
+  
 
 
-    public MoveCommand(ShapeMaker shapeMaker, ShapeType shapeType, Point mousePressed, Point mouseReleased){
+    public MoveCommand(ShapeMaker shapeMaker, Point moveStart, Point moveEnd,   ShapeType shapeType){
         this.shapeMaker = shapeMaker;
+        this.moveStart = moveStart;
+        this.moveEnd = moveEnd;
         this.shapeType = shapeType;
-        this.mousePressed = mousePressed;
-        this.mouseReleased = mouseReleased;
 
-        dX= (mouseReleased.x - mousePressed.x);
-        dY = (mouseReleased.y - mousePressed.y);
     }
 
     @Override
     public void run() {
-        move(shapeMaker.shapeList.masterShapeList);
-        pasteMoved(movedShapeList);
-        //shapeMaker.shapeList.drawShapeHandler.update(shapeMaker.shapeList.masterShapeList);
-        shapeMaker.shapeList.drawShapeHandler.paintCanvas.repaint();
-        //shapeMaker.shapeList.drawShapeHandler.update(shapeMaker.shapeList.masterShapeList);
-        
-        CommandHistory.add(this);
-    }
 
-    private void move(List<Shape> masterShapeList) {
+        moveHelper(shapeMaker.master());
+        shapeMaker.drawUpdate();
+   
+        
+        CommandHistory.add(this);}
+    
+
+    public void moveHelper(List<Shape> masterShapeList) {
+        dX= (moveEnd.x - moveStart.x);
+        dY = (moveEnd.y - moveStart.y);
+        //PaintCanvasBase paintCanvas = new PaintCanvas();
 
         for(Shape shape: masterShapeList) {
-            xs = mousePressed.x;
-            ys = mousePressed.y;
-            xe = mouseReleased.x;
-            ye = mouseReleased.y;
+            xs = moveStart.x;
+            ys = moveStart.y;
+            xe = moveEnd.x;
+            ye = moveEnd.y;
 
-            if((xs>= shape.getXMin() && xs<=shape.getXMax() && ye>=shape.getYMin() && ye <=shape.getYMax()&&xe>= shape.getXMin() && xe<=shape.getXMax() && ys>=shape.getYMin() && ys <=shape.getYMax())){
+            if((xs>= shape.getXMin() && xs<=shape.getXMax() && ys>=shape.getYMin() && ys <=shape.getYMax())){
 
-                //int newStartPointX = (shape.startPoint.x)+dX;
-                //int newStartPointY = (shape.startPoint.y)+dY;
+                Point startPoint = new Point((shape.startPoint.x), (shape.startPoint.y));
+                Point endPoint = new Point((shape.endPoint.x), (shape.endPoint.y));
 
-                //int newEndPointX = (shape.endPoint.x)+dX;
-                //int newEndPointY = (shape.endPoint.y)+dY;
+
 
                 Point newStartPoint = new Point((shape.startPoint.x)+dX, (shape.startPoint.y)+dY);
                 Point newEndPoint = new Point((shape.endPoint.x)+dX,(shape.endPoint.y)+dY);
 
                 Shape movedShape = new Shape(shapeType, newStartPoint, newEndPoint, shape.primaryColor, shape.secondaryColor, shape.shadingType,shape.appState);
-                //shapeMaker.shapeList.commandHistoryUndo.add(shape);
-                //shapeMaker.shapeList.commandHistoryRedo.add(movedShape);
+                Shape updater = new Shape(shapeType, startPoint,endPoint,ShapeColor.WHITE,ShapeColor.WHITE,shape.shadingType,shape.appState);
 
-                movedShapeList.add(shape);
-                movedShapeList.add(movedShape);
-                //movedShapeList.remove(shape);
-                //shape.shapeList.addShape(movedShape);
-                //CommandHistory.add(this);
+                
+                shapeMaker.cmdUndo(shape);
+                shapeMaker.cmdRedo(movedShape);
+              
+
+                shapeMaker.shapeList.addShape(updater);
+                shapeMaker.shapeList.addShape(movedShape);
+                shapeMaker.move(shape);
+                shapeMaker.move(movedShape);
+            
 
             }
         }
-    }
+    
 
-    private void pasteMoved(List<Shape> movedShapeList) {
         for (Shape shape : movedShapeList) {
-            if (!shapeMaker.shapeList.masterShapeList.contains(shape)) {
-                Shape movedShape = new Shape(shape.shapeType, shape.startPoint, shape.endPoint, shape.primaryColor, shape.secondaryColor, shape.shadingType,shape.appState);
-                shapeMaker.shapeList.masterShapeList.add(movedShape);
+ 
+            if (shapeMaker.containShape(shape)) {
+                shapeMaker.shapeList.removeShape(shape);
             }
             else{
-                shapeMaker.shapeList.masterShapeList.remove(shape);
+
+                Shape moveShape = new Shape(shape.shapeType, shape.startPoint, shape.endPoint, shape.primaryColor, shape.secondaryColor, shape.shadingType,shape.appState);
+                shapeMaker.shapeList.addShape(moveShape);
+                
                 
             }
         }
@@ -89,27 +100,28 @@ public class MoveCommand implements ICommand, IUndoable {
 
     @Override
     public void undo() {
-        if(shapeMaker.shapeList.masterShapeList.isEmpty()){
-            System.out.println("no shapes left to remove");
-        } else {
-            System.out.println("masterShapeList size = "+ shapeMaker.shapeList.masterShapeList.size());
-            shapeMaker.shapeList.masterShapeList.remove(shapeMaker.shapeList.masterShapeList.size()-1);
-            pasteMoved(shapeMaker.shapeList.commandHistoryUndo);
-            pasteMoved(shapeMaker.shapeList.commandHistoryRedo);
+        if(!shapeMaker.shapeList.masterShapeList.isEmpty()){
+        
+            
+            shapeMaker.shapeList.masterShapeList.remove(shapeMaker.recentIndex(shape));
+  
+            shapeMaker.moveRepaint();
+            shapeMaker.drawUpdate();
 
-            System.out.println("masterShapeList size = "+ shapeMaker.shapeList.masterShapeList.size());
-            shapeMaker.shapeList.drawShapeHandler.paintCanvas.repaint();
-            shapeMaker.shapeList.drawShapeHandler.update(shapeMaker.shapeList.masterShapeList);
-        }
+        }else{System.out.println("not enough shapes");
 
     }
 
-    // bug in redo, pastes both the moved shape and the originally drawn shape on redo button. Can't get rid of both shapes in masterShapeList
 
+    }
+
+    
     @Override
     public void redo() {
         run();
     }
 
 }
+
+
 

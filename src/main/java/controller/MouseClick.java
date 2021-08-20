@@ -21,11 +21,11 @@ public class MouseClick extends MouseAdapter {
     public ShapeType shapeType;
     public Point startPoint;
     public Point endPoint;
-    public String clickType;
     public Shape shape;
     public Graphics2D graphics2d;
     public Point initMove;
     public Point endMove;
+    public Point mousePressed,mouseReleased;
 
 
     public MouseClick(ShapeMaker shapeMaker) {
@@ -45,18 +45,14 @@ public class MouseClick extends MouseAdapter {
         int xR = e.getX();
         int yR = e.getY();
         endPoint = new Point(xR, yR);
-        //endMove = new Point(xR,yR);
        
-
-        //shape = new Shape(shapeType, startPoint, endPoint);
-
 
        
 
         ICommand shapeManeuver = null;
 
        
-        switch(shapeMaker.appState.getActiveMouseMode()){
+        /*switch(shapeMaker.appState.getActiveMouseMode()){
             
             case DRAW:
             shapeManeuver=new CreateShapeCommand(shapeMaker, shapeType, startPoint, endPoint);
@@ -65,23 +61,22 @@ public class MouseClick extends MouseAdapter {
             shapeManeuver = new SelectShapeCommand(shapeMaker, startPoint, endPoint, shapeType);
             break;
             case MOVE:
-            shapeManeuver = new MoveCommand(shapeMaker, shapeType, startPoint, endPoint);
-            break;}
+            shapeManeuver = new MoveCommand(shapeMaker,startPoint, endPoint, shapeType);
+            break;}*/
 
             
         
   
 
-        /*if(shapeMaker.appState.getActiveMouseMode()== MouseMode.DRAW) {
-            shapeManeuver = new CreateShapeCommand(shapeMaker, shapeType, startPoint, endPoint);
+        if(shapeMaker.appState.getActiveMouseMode()== MouseMode.DRAW) {
+            shapeManeuver = new CreateShape(shapeMaker, shapeType, startPoint, endPoint);
         }
         else if(shapeMaker.appState.getActiveMouseMode()==MouseMode.SELECT) {
             shapeManeuver = new SelectShapeCommand(shapeMaker, startPoint, endPoint, shapeType);
         }
         else if(shapeMaker.appState.getActiveMouseMode()==MouseMode.MOVE){
-        shapeManeuver = new MoveCommand(shapeMaker, startPoint, endPoint, shape);
-        }*/
-
+        shapeManeuver = new MoveCommand(shapeMaker, startPoint, endPoint, shapeType);
+        }
         shapeManeuver.run();
     }
 

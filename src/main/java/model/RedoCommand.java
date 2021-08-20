@@ -10,49 +10,43 @@ import java.util.List;
 public class RedoCommand implements ICommand, IUndoable {
 
     public ShapeList shapeList;
-    public List<Shape> commandHistoryUndo;
-    public List<Shape> commandHistoryRedo;
+    public List<Shape> cmdUndo,cmdRedo;
+  
 
-    public RedoCommand(ShapeList shapeList, List<Shape> commandHistoryUndo, List<Shape> commandHistoryRedo){
+    public RedoCommand(List<Shape> cmdUndo, List<Shape> cmdRedo, ShapeList shapeList){
+        this.cmdUndo = cmdUndo;
+        this.cmdRedo = cmdRedo;
         this.shapeList = shapeList;
-        this.commandHistoryUndo = commandHistoryUndo;
-        this.commandHistoryRedo = commandHistoryRedo;
     }
 
     @Override
     public void run() {
-        redo();
 
-        if(!shapeList.masterShapeList.isEmpty() || !commandHistoryRedo.isEmpty()){
-            
+        if(!shapeList.listEmpty()||!cmdRedo.isEmpty()){
 
-        
-            int UndoIndex = commandHistoryRedo.size()-1;
-            Shape shapeUndo = commandHistoryRedo.get(UndoIndex);
-
-            if(commandHistoryUndo.isEmpty()){
-                
-                commandHistoryUndo.add(shapeUndo);
-            } else{
-                commandHistoryUndo.clear();
-                commandHistoryUndo.add(shapeUndo);
-            }
-
-        
-            shapeList.masterShapeList.add(shapeUndo);
-
-            shapeList.drawShapeHandler.paintCanvas.repaint();
-            shapeList.drawShapeHandler.update(shapeList.masterShapeList);
-
+            Shape undo = cmdRedo.get(cmdRedo.size()-1);
+            cmdUndo.clear();
+            cmdUndo.add(undo);
+            shapeList.addShape(undo);
+            shapeList.repainter();
+            shapeList.updater();
             CommandHistory.add(this);
-        }else{return;}
+        }else{
+            return;
+        }
+
+        redo();
 
 
     }
 
     @Override
-    public void undo() { CommandHistory.undo();}
+    public void undo() {
+        CommandHistory.undo();
+    }
 
     @Override
-    public void redo() { CommandHistory.redo();}
+    public void redo() {
+        CommandHistory.redo();
+    }
 }

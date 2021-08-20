@@ -23,15 +23,11 @@ public class SelectShapeCommand implements ICommand {
 
     @Override
     public void run() {
-        selectAdd(shapeMaker.shapeList.masterShapeList);
-        shapeMaker.shapeList.drawShapeHandler.update(shapeMaker.shapeList.masterShapeList);
+        selectHelper(shapeMaker.master());
+        //BorderDrawer.drawDash (ShapeList);
     }
 
-
-
-
-
-    public void selectAdd(List<Shape> masterShapeList){
+    public void selectHelper(List<Shape> masterShapeList){
         xs = startPoint.x;
         ys = startPoint.y;
         xe = endPoint.x;
@@ -40,11 +36,19 @@ public class SelectShapeCommand implements ICommand {
 
         for(Shape shape: masterShapeList){
             if((xs>= shape.getXMin() && xs<=shape.getXMax() && ye>=shape.getYMin() && ye <=shape.getYMax()&&xe>= shape.getXMin() && xe<=shape.getXMax() && ys>=shape.getYMin() && ys <=shape.getYMax())){
-                shapeMaker.selectedShapeList.add(shape);
+                shapeMaker.selectAdd(shape);
+                //shapeMaker.groupList.add(shape);
+                //shapeMaker.shapeList.getGroupList().contains(shape);
                 System.out.println("Select shapes: " );
                 System.out.println(shapeType);
             }
         }
+       
+        shapeMaker.drawUpdate();
+
+
+    
     }
+
 }
 

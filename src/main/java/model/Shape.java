@@ -1,18 +1,13 @@
 package model;
-
-import java.awt.Point;
+import java.awt.*;
 import model.persistence.ApplicationState;
 
 public class Shape {
-
+    public int xMin, xMax, yMin, yMax, middle, height, width;
     public ShapeList shapeList;
     public ShapeType shapeType;
-    public Point startPoint;
-    public Point endPoint;
-    public int height, width;
-    public int xMin, xMax, yMin, yMax, middle;
-    public ShapeColor primaryColor;
-    public ShapeColor secondaryColor;
+    public Point startPoint,endPoint;
+    public ShapeColor primaryColor,secondaryColor;
     public ShapeShadingType shadingType;
     public ApplicationState appState;
 
@@ -29,13 +24,11 @@ public class Shape {
 
         xMin = Math.min(startPoint.x, endPoint.x);
         xMax = Math.max(startPoint.x, endPoint.x);
-
+        width = xMax-xMin;
         yMin = Math.min(startPoint.y, endPoint.y);
         yMax = Math.max(startPoint.y, endPoint.y);
-
-        width = xMax-xMin;
         height = yMax-yMin;
-        middle = (xMin)+((xMax-xMin)/2);
+        middle = (xMax)-((xMax-xMin)/2);
     }
 
     public void shapeStats(){
@@ -46,19 +39,24 @@ public class Shape {
     }
 
 
-    public int getXMax(){ return xMax;}
+
+ 
+    public int getWidth(){ return width;}
+
+    public int getHeight(){ return height;}
 
     public int getXMin(){return xMin;}
 
-    public int getYMax(){ return yMax;}
+    public int getXMax(){ return xMax;}
 
     public int getYMin(){return yMin;}
 
-    public int getHeight(){ return height; }
+    public int getYMax(){ return yMax;}
 
-    public int getWidth(){ return width; }
+    public int getMiddlePoint(){ return middle;}
 
-    public int getTriangleMidPoint(){ return middle;}
+
+   
 
 }
 

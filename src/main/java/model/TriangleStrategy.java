@@ -13,30 +13,23 @@ public class TriangleStrategy implements IShape {
 
 
 
-    public TriangleStrategy(ShapeColor primaryColor, ShapeColor secondaryColor, Shape shape, Graphics2D graphics) {
+
+    public TriangleStrategy(ShapeColor primaryColor, ShapeColor secondaryColor, Shape shape, Graphics2D graphics2d) {
         this.primaryColor = primaryColor;
         this.secondaryColor = secondaryColor;
         this.shape = shape;
-        this.graphics2d = graphics;
+        this.graphics2d = graphics2d;
     }
 
-    @Override
-    public Color EnumColorMap(ShapeColor shapeColor) {
-        EnumMap<ShapeColor, Color> color = new EnumMap<>(ShapeColor.class);
-        ColorClass colorSingleton = ColorClass.getColor(shapeColor,color);
-        Color colorChosen = color.get(shapeColor);
-
-        return colorChosen;
-    }
 
     @Override
     public void draw() {
         switch(shape.shadingType){
             case FILLED_IN:
-                int[] xF = {shape.getXMin(), shape.getTriangleMidPoint(), shape.getXMax()};
+                int[] xF = {shape.getXMin(), shape.getMiddlePoint(), shape.getXMax()};
                 int[] yF = {shape.getYMax(), shape.getYMin(), shape.getYMax() };
 
-                Color primaryF = EnumColorMap(primaryColor);
+                Color primaryF = ColorMap(primaryColor);
 
                 graphics2d.setColor(primaryF);
                 graphics2d.setStroke(new BasicStroke(5));
@@ -44,10 +37,10 @@ public class TriangleStrategy implements IShape {
                 break;
 
             case OUTLINE:
-                int[] xO = {shape.getXMin(), shape.getTriangleMidPoint(), shape.getXMax()};
+                int[] xO = {shape.getXMin(), shape.getMiddlePoint(), shape.getXMax()};
                 int[] yO = {shape.getYMax(), shape.getYMin(), shape.getYMax() };
 
-                Color primaryO = EnumColorMap(primaryColor);
+                Color primaryO = ColorMap(primaryColor);
 
                 graphics2d.setColor(primaryO);
                 graphics2d.setStroke(new BasicStroke(5));
@@ -55,14 +48,14 @@ public class TriangleStrategy implements IShape {
                 break;
 
             case OUTLINE_AND_FILLED_IN:
-                int[] xOF = {shape.getXMin(), shape.getTriangleMidPoint(), shape.getXMax()};
+                int[] xOF = {shape.getXMin(), shape.getMiddlePoint(), shape.getXMax()};
                 int[] yOF = {shape.getYMax(), shape.getYMin(), shape.getYMax() };
-                Color primaryOF = EnumColorMap(primaryColor);
+                Color primaryOF = ColorMap(primaryColor);
                 graphics2d.setColor(primaryOF);
                 graphics2d.setStroke(new BasicStroke(5));
                 graphics2d.fillPolygon(xOF, yOF, 3);
 
-                Color secondaryOF = EnumColorMap(secondaryColor);
+                Color secondaryOF = ColorMap(secondaryColor);
                 graphics2d.setColor(secondaryOF);
                 graphics2d.setStroke(new BasicStroke(5));
                 graphics2d.drawPolygon(xOF, yOF, 3);
@@ -72,6 +65,13 @@ public class TriangleStrategy implements IShape {
 
         }
 
+    }
+
+
+    public Color ColorMap(ShapeColor shapeColor) {
+        EnumMap<ShapeColor, Color> color = new EnumMap<>(ShapeColor.class);
+        ColorAdapter.getColor(shapeColor,color);
+        return color.get(shapeColor);
     }
 
 

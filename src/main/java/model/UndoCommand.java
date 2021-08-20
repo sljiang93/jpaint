@@ -10,50 +10,49 @@ import java.util.List;
 public class UndoCommand implements ICommand, IUndoable {
 
     public ShapeList shapeList;
-    public List<Shape> commandHistoryUndo;
-    public List<Shape> commandHistoryRedo;
+    public List<Shape> cmdUndo,cmdRedo;
 
-    public UndoCommand(ShapeList shapeList, List<Shape> commandHistoryUndo, List<Shape> commandHistoryRedo){
+
+    public UndoCommand(List<Shape> cmdUndo, List<Shape> cmdRedo, ShapeList shapeList){
+        this.cmdUndo = cmdUndo;
+        this.cmdRedo = cmdRedo;
         this.shapeList = shapeList;
-        this.commandHistoryUndo = commandHistoryUndo;
-        this.commandHistoryRedo = commandHistoryRedo;
 
     }
 
     @Override
     public void run() {
-        undo();
-
-        if(!shapeList.masterShapeList.isEmpty() || !commandHistoryRedo.isEmpty()){
         
-            int shapeRedoIndex = shapeList.masterShapeList.size()-1;
-            Shape shapeRedo = shapeList.masterShapeList.get(shapeRedoIndex);
 
-            if(commandHistoryRedo.isEmpty()){
-                
-                commandHistoryRedo.add(shapeRedo);
-            } else{
-                commandHistoryRedo.clear();
-                commandHistoryRedo.add(shapeRedo);
-            }
-
-            shapeList.masterShapeList.remove(shapeList.masterShapeList.size()-1);
-            shapeList.drawShapeHandler.paintCanvas.repaint();
-            shapeList.drawShapeHandler.update(shapeList.masterShapeList);
+        if(!shapeList.listEmpty()){
+            Shape redo = shapeList.masterShapeList.get(shapeList.index()); 
+            cmdRedo.clear();
+            cmdRedo.add(redo);
+            shapeList.masterShapeList.remove(shapeList.recentIndex(redo));
+            shapeList.repainter();
+            shapeList.updater();
 
 
             CommandHistory.add(this);
-        }else{return;}
+        }else{
+            return;
+        }
+        undo();
 
 
 
     }
 
     @Override
-    public void undo() { CommandHistory.undo(); }
+    public void undo() {
+        CommandHistory.undo();
+    }
 
     @Override
-    public void redo() { CommandHistory.redo();}
+    public void redo() {
+        CommandHistory.redo();
+    }
 
 }
+
 

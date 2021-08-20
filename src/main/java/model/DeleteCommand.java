@@ -7,7 +7,7 @@ import view.gui.PaintCanvas;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.CreateShapeCommand;
+import model.CreateShape;
 import model.interfaces.IApplicationState;
 
 
@@ -50,8 +50,8 @@ public class DeleteCommand implements ICommand,IUndoable{
     @Override
     public void undo() {
         shapeList.masterShapeList.add(deleteShape);
-        shapeList.drawShapeHandler.paintCanvas.repaint();
-        shapeList.drawShapeHandler.update(shapeList.masterShapeList);
+        shapeList.drawShapeStrategy.paintCanvas.repaint();
+        shapeList.drawShapeStrategy.update(shapeList.masterShapeList);
         CommandHistory.undo();
         // TODO Auto-generated method stub
         
