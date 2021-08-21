@@ -9,8 +9,7 @@ import java.util.List;
 public class SelectShapeCommand implements ICommand {
 
     public ShapeMaker shapeMaker;
-    public Point startPoint;
-    public Point endPoint;
+    public Point startPoint,endPoint;
     public int xs,ys,w,h,xe,ye;
     public ShapeType shapeType;
 
@@ -19,6 +18,10 @@ public class SelectShapeCommand implements ICommand {
         this.startPoint = startPoint;
         this.endPoint = endPoint;
         this.shapeType = shapeType;
+        xs = startPoint.x;
+        ys = startPoint.y;
+        xe = endPoint.x;
+        ye = endPoint.y;
     }
 
     @Override
@@ -28,17 +31,10 @@ public class SelectShapeCommand implements ICommand {
     }
 
     public void selectHelper(List<Shape> masterShapeList){
-        xs = startPoint.x;
-        ys = startPoint.y;
-        xe = endPoint.x;
-        ye = endPoint.y;
-        
 
         for(Shape shape: masterShapeList){
             if((xs>= shape.getXMin() && xs<=shape.getXMax() && ye>=shape.getYMin() && ye <=shape.getYMax()&&xe>= shape.getXMin() && xe<=shape.getXMax() && ys>=shape.getYMin() && ys <=shape.getYMax())){
                 shapeMaker.selectAdd(shape);
-                //shapeMaker.groupList.add(shape);
-                //shapeMaker.shapeList.getGroupList().contains(shape);
                 System.out.println("Select shapes: " );
                 System.out.println(shapeType);
             }

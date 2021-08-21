@@ -45,12 +45,12 @@ public class UndoCommand implements ICommand, IUndoable {
 
     @Override
     public void undo() {
-        CommandHistory.undo();
+        CommandHistory.redo();
     }
 
     @Override
     public void redo() {
-        CommandHistory.redo();
+        CommandHistory.undo();
     }
 
 }

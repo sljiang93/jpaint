@@ -36,7 +36,7 @@ public class MouseClick extends MouseAdapter {
         int xP = e.getX();
         int yP = e.getY();
         startPoint = new Point(xP, yP);
-        //initMove = new Point (xP,yP);
+
     }
 
     public void mouseReleased(MouseEvent e) {

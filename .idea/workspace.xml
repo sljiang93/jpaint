@@ -4,7 +4,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="349a2f7b-8ba5-4aa9-8126-33f4ae4690a3" name="Default Changelist" comment="." />
+    <list default="true" id="349a2f7b-8ba5-4aa9-8126-33f4ae4690a3" name="Default Changelist" comment=".">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/model/DeleteCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/DeleteCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/model/MoveCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/MoveCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/model/SelectShapeCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/SelectShapeCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/model/UndoCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/model/UndoCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/JPaintController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/JPaintController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/MouseClick.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/MouseClick.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/ColorSingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/CommandHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/CommandHistory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/CopyCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/CopyCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/CreateShapeCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/DeleteCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/DeleteCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/DrawShapeHandler$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/DrawShapeHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/EllipseStrategy$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/EllipseStrategy$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/EllipseStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/EllipseStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/MoveCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/MoveCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/PasteCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/PasteCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/RectangleStrategy$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/RectangleStrategy$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/RectangleStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/RectangleStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/RedoCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/RedoCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/SelectShapeCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/SelectShapeCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/Shape.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/ShapeFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/ShapeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/ShapeList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/StartAndEndPointMode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/TriangleStrategy$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/TriangleStrategy$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/TriangleStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/TriangleStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/UndoCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/UndoCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/dialogs/ChooseStartAndEndPointModeDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/dialogs/ChooseStartAndEndPointModeDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/dialogs/DialogProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/dialogs/DialogProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/interfaces/IApplicationState.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/interfaces/IApplicationState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/interfaces/IDialogProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/interfaces/IDialogProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/interfaces/IDrawShapeHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/interfaces/IShapeStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/persistence/ApplicationState.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/persistence/ApplicationState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/EventName$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/EventName$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/EventName$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/EventName$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/EventName$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/EventName$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/EventName$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/EventName$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/EventName$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/EventName.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/EventName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/dist/sljiang93-jpaint.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/dist/sljiang93-jpaint.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/jpaint-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/jpaint-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MouseClick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MouseClick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/DeleteCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DeleteCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/MoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MoveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/SelectShapeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/SelectShapeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/UndoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/UndoCommand.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -277,6 +335,8 @@
       <workItem from="1629473021164" duration="48000" />
       <workItem from="1629480393135" duration="202000" />
       <workItem from="1629485575110" duration="41000" />
+      <workItem from="1629518131121" duration="50000" />
+      <workItem from="1629520057740" duration="1023000" />
     </task>
     <task id="LOCAL-00001" summary="some significant bugs remain but I've move mouseClick and added commands such as redo and undo. CreateShape and DrawShape are a work in progress. More to come.">
       <created>1627091474856</created>
@@ -383,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629485593393</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary=".">
+      <created>1629518155212</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1629518155215</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -38,10 +38,8 @@ public class MoveCommand implements ICommand, IUndoable {
     public void run() {
 
         moveHelper(shapeMaker.master());
-        shapeMaker.drawUpdate();
-   
-        
-        CommandHistory.add(this);}
+    }
+ 
     
 
     public void moveHelper(List<Shape> masterShapeList) {
@@ -96,6 +94,8 @@ public class MoveCommand implements ICommand, IUndoable {
                 
             }
         }
+        shapeMaker.drawUpdate();
+        CommandHistory.add(this);
     }
 
     @Override
@@ -106,7 +106,8 @@ public class MoveCommand implements ICommand, IUndoable {
             shapeMaker.shapeList.masterShapeList.remove(shapeMaker.recentIndex(shape));
             shapeMaker.drawUpdate();
 
-        }else{System.out.println("not enough shapes");
+        }else{
+            return;
 
     }
 
@@ -120,6 +121,7 @@ public class MoveCommand implements ICommand, IUndoable {
     }
 
 }
+
 
 
 

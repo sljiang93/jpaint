@@ -23,9 +23,6 @@ public class DeleteCommand implements ICommand,IUndoable{
         shapeList.addShape(shapeList.selectedShapeList.get(shapeList.index()));
         shapeList.repainter();
         shapeList.updater();
-
-
-
         
     }
 
@@ -42,7 +39,7 @@ public class DeleteCommand implements ICommand,IUndoable{
         shapeList.repainter();
         shapeList.updater();
         CommandHistory.add(this);
-        //shapeMaker.shapeList.masterShapeList.remove(shapeMaker.recentIndex(shape));
+
 
         
     }
