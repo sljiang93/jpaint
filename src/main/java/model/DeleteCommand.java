@@ -19,10 +19,11 @@ public class DeleteCommand implements ICommand,IUndoable{
 
     @Override
     public void undo() {
-        CommandHistory.undo();
+    
         shapeList.addShape(shapeList.selectedShapeList.get(shapeList.index()));
         shapeList.repainter();
         shapeList.updater();
+
 
 
         
@@ -30,7 +31,7 @@ public class DeleteCommand implements ICommand,IUndoable{
 
     @Override
     public void redo() {
-        run();
+        shapeList.removeShape(shapeList.selectedShapeList.get(shapeList.index()));
 
         
     }

@@ -5,7 +5,7 @@ import model.interfaces.IApplicationState;
 import view.EventName;
 import view.gui.PaintCanvas;
 import view.interfaces.IUiModule;
-import model.Shape;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -18,9 +18,10 @@ public class JPaintController implements IJPaintController {
     public PaintCanvas paintCanvas;
     public List<Shape> commandHistoryUndo;
     public List<Shape> commandHistoryRedo;
+    public List<Shape> groupList;
 
     public JPaintController(IUiModule uiModule, IApplicationState applicationState, ShapeList shapeList, List<Shape> selectedShapeList,
-    List<Shape> copyList, List<Shape> commandHistoryUndo, List<Shape> commandHistoryRedo) {
+    List<Shape> copyList, List<Shape> commandHistoryUndo, List<Shape> commandHistoryRedo, List<Shape> groupList) {
         this.uiModule = uiModule;
         this.applicationState = applicationState;
         this.selectedShapeList = selectedShapeList;
@@ -28,6 +29,7 @@ public class JPaintController implements IJPaintController {
         this.copyList = copyList;
         this.commandHistoryUndo = commandHistoryUndo;
         this.commandHistoryRedo = commandHistoryRedo;
+        this.groupList=groupList;
         
  
     }
@@ -43,11 +45,13 @@ public class JPaintController implements IJPaintController {
         uiModule.addEvent(EventName.CHOOSE_SECONDARY_COLOR, () -> applicationState.setActiveSecondaryColor());
         uiModule.addEvent(EventName.CHOOSE_SHADING_TYPE, () -> applicationState.setActiveShadingType());
         uiModule.addEvent(EventName.CHOOSE_MOUSE_MODE, () -> applicationState.setActiveStartAndEndPointMode());
-        uiModule.addEvent(EventName.DELETE, () -> new DeleteCommand(shapeList).run());//applicationState.DeleteCommand());
+        uiModule.addEvent(EventName.DELETE, () -> new DeleteCommand(shapeList).run());
         uiModule.addEvent(EventName.COPY, () -> new CopyCommand(masterShapeList,selectedShapeList, copyList, shapeList).run());
         uiModule.addEvent(EventName.PASTE, () -> new PasteCommand(shapeList, copyList).run());
-
+        uiModule.addEvent(EventName.GROUP,()-> new GroupCommand(selectedShapeList, groupList, shapeList).run());
         uiModule.addEvent(EventName.UNDO, () -> new UndoCommand(commandHistoryUndo, commandHistoryRedo,shapeList).run());
         uiModule.addEvent(EventName.REDO, () -> new RedoCommand(commandHistoryUndo,commandHistoryRedo,shapeList).run());
+        uiModule.addEvent(EventName.UNGROUP,()-> new GroupCommand(selectedShapeList, groupList, shapeList).run());
+
     }
 }

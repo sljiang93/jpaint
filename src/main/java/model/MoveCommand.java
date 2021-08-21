@@ -47,7 +47,7 @@ public class MoveCommand implements ICommand, IUndoable {
     public void moveHelper(List<Shape> masterShapeList) {
         dX= (moveEnd.x - moveStart.x);
         dY = (moveEnd.y - moveStart.y);
-        //PaintCanvasBase paintCanvas = new PaintCanvas();
+        PaintCanvasBase paintCanvas = new PaintCanvas();
 
         for(Shape shape: masterShapeList) {
             xs = moveStart.x;
@@ -62,10 +62,10 @@ public class MoveCommand implements ICommand, IUndoable {
 
 
 
-                Point newStartPoint = new Point((shape.startPoint.x)+dX, (shape.startPoint.y)+dY);
-                Point newEndPoint = new Point((shape.endPoint.x)+dX,(shape.endPoint.y)+dY);
+                Point movedStartPoint = new Point((shape.startPoint.x)+dX, (shape.startPoint.y)+dY);
+                Point movedEndPoint = new Point((shape.endPoint.x)+dX,(shape.endPoint.y)+dY);
 
-                Shape movedShape = new Shape(shapeType, newStartPoint, newEndPoint, shape.primaryColor, shape.secondaryColor, shape.shadingType,shape.appState);
+                Shape movedShape = new Shape(shapeType, movedStartPoint, movedEndPoint, shape.primaryColor, shape.secondaryColor, shape.shadingType,shape.appState);
                 Shape updater = new Shape(shapeType, startPoint,endPoint,ShapeColor.WHITE,ShapeColor.WHITE,shape.shadingType,shape.appState);
 
                 
@@ -104,8 +104,6 @@ public class MoveCommand implements ICommand, IUndoable {
         
             
             shapeMaker.shapeList.masterShapeList.remove(shapeMaker.recentIndex(shape));
-  
-            //shapeMaker.moveRepaint();
             shapeMaker.drawUpdate();
 
         }else{System.out.println("not enough shapes");

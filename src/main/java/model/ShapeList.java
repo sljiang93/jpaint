@@ -38,6 +38,9 @@ public class ShapeList{
     public boolean listEmpty (){
         return masterShapeList.isEmpty();
     }
+    public boolean groupContains(){
+        return groupList.contains(shape);
+    }
 
     public int recentIndex (Shape shape){
         return masterShapeList.size()-1;
@@ -54,7 +57,7 @@ public class ShapeList{
         return masterShapeList.size()-1;
     }
 
-    public List<Shape> getSelectList(){
+    public List<Shape> getSelectedShapeList(){
         return selectedShapeList;
     }
     public int getSelectSize(){

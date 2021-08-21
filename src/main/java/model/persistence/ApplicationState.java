@@ -79,21 +79,6 @@ public class ApplicationState implements IApplicationState{
         return activeMouseMode;
     }
 
-    @Override
-    public void CopyCommand(){}  
-
-    @Override
-    public void DeleteCommand(){}
-
-    @Override
-    public void PasteCommand(){}
-
-    @Override
-    public void RedoCommand(){}
-
-    @Override
-    public void UndoCommand(){}
-
 
     private void setDefaults() {
         activeShapeType = ShapeType.RECTANGLE;

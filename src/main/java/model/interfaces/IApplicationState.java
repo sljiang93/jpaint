@@ -16,7 +16,6 @@ public interface IApplicationState {
 
     void setActiveStartAndEndPointMode();
 
-
     ShapeType getActiveShapeType();
 
     ShapeColor getActivePrimaryColor();
@@ -26,17 +25,5 @@ public interface IApplicationState {
     ShapeShadingType getActiveShapeShadingType();
 
     MouseMode getActiveMouseMode();
-
-    void CopyCommand();
-
-    void DeleteCommand();
-
-    void PasteCommand();
-    
-    void RedoCommand();
-
-    void UndoCommand();
-
-
 
 }
