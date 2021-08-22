@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="349a2f7b-8ba5-4aa9-8126-33f4ae4690a3" name="Default Changelist" comment=".">
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/Main_0_main_calls.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/Main_structure.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="349a2f7b-8ba5-4aa9-8126-33f4ae4690a3" name="Default Changelist" comment="seems like group wasn't showing up on my github even though it was in the zip i submitted.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/gui/PaintCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/gui/PaintCanvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main_0_main_calls.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main_structure.puml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,6 +291,7 @@
       <workItem from="1629650064901" duration="238000" />
       <workItem from="1629650317688" duration="1012000" />
       <workItem from="1629651791772" duration="1411000" />
+      <workItem from="1629663793590" duration="878000" />
     </task>
     <task id="LOCAL-00001" summary="some significant bugs remain but I've move mouseClick and added commands such as redo and undo. CreateShape and DrawShape are a work in progress. More to come.">
       <created>1627091474856</created>
@@ -414,7 +412,28 @@
       <option name="project" value="LOCAL" />
       <updated>1629521376326</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary=".">
+      <created>1629663817176</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1629663817176</updated>
+    </task>
+    <task id="LOCAL-00019" summary="seems like group wasn't showing up on my github even though it was in the zip i submitted.">
+      <created>1629664074843</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1629664074843</updated>
+    </task>
+    <task id="LOCAL-00020" summary="seems like group wasn't showing up on my github even though it was in the zip i submitted.">
+      <created>1629664188163</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1629664188163</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,6 +463,7 @@
     <MESSAGE value="bug fixes before doing group" />
     <MESSAGE value="delete kind of works" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="seems like group wasn't showing up on my github even though it was in the zip i submitted." />
+    <option name="LAST_COMMIT_MESSAGE" value="seems like group wasn't showing up on my github even though it was in the zip i submitted." />
   </component>
 </project>
